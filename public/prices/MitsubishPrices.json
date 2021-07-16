@@ -1,0 +1,56 @@
+{
+  "brandName": "Mitsubishi",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "Eclipse",
+      "average": 26538,
+      "median": 26538,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "Eclipse Cross",
+      "average": 27250,
+      "median": 27720,
+      "stdDev": 1708.02,
+      "pVariance": 2188012.5
+    },
+    {
+      "name": "Mirage",
+      "average": 17927.37,
+      "median": 18159,
+      "stdDev": 1809.29,
+      "pVariance": 2864363.98
+    },
+    {
+      "name": "Mirage G4",
+      "average": 18995,
+      "median": 18995,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "Outlander",
+      "average": 34331.14,
+      "median": 34896.5,
+      "stdDev": 2094.87,
+      "pVariance": 4231755.69
+    },
+    {
+      "name": "Outlander Sport",
+      "average": 22074.66,
+      "median": 24495,
+      "stdDev": 4397.22,
+      "pVariance": 12890400.22
+    },
+    {
+      "name": "SP",
+      "average": 27518,
+      "median": 27518,
+      "stdDev": 0,
+      "pVariance": 0
+    }
+  ]
+}

@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@azure/service-bus": "^7.2.0",
     "@formatjs/intl-relativetimeformat": "^8.1.8",
     "@material-ui/core": "^4.12.1",
     "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
     "base-shell": "^1.2.22",
+    "convert-hrtime": "^5.0.0",
     "github-markdown-css": "^4.0.0",
     "intl": "^1.2.5",
     "intl-locales-supported": "^1.8.12",
@@ -23,7 +26,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-virtualized-auto-sizer": "^1.0.5",
-    "react-window": "^1.8.6"
+    "react-window": "^1.8.6",
+    "react-xml-parser": "^1.1.8"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -105,6 +105,47 @@ const getMenuItems = (props) => {
       leftIcon: <DashboardIcon />,
     },
     {
+      primaryText: intl.formatMessage({ id: 'ruleApps', defaultMessage: 'Rule Apps' }),
+      primaryTogglesNestedList: true,
+      leftIcon: <Web />,
+      nestedItems: [
+        {
+          value: '/Dealership',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'Dealership',
+            defaultMessage: 'Dealership',
+          }),
+          leftIcon: <ChatBubble />,
+        },
+        {
+          value: '/GetVehiclePhoto',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'GetVehiclePhoto',
+            defaultMessage: 'GetVehiclePhoto',
+          }),
+          leftIcon: <ChatBubble />,
+        }
+      ]
+    },
+    {
+      primaryText: intl.formatMessage({ id: 'general', defaultMessage: 'Azure' }),
+      primaryTogglesNestedList: true,
+      leftIcon: <Web />,
+      nestedItems: [
+        {
+          value: '/ServiceBus',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'ServiceBus',
+            defaultMessage: 'ServiceBus',
+          }),
+          leftIcon: <ChatBubble />,
+        }
+      ]
+    },
+    {
       primaryText: intl.formatMessage({ id: 'demos', defaultMessage: 'Demos' }),
       primaryTogglesNestedList: true,
       leftIcon: <Web />,

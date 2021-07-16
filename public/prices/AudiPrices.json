@@ -1,0 +1,182 @@
+{
+  "brandName": "Audi",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "A4",
+      "average": 46021.66,
+      "median": 43967.5,
+      "stdDev": 3258.32,
+      "pVariance": 10518365.27
+    },
+    {
+      "name": "A4 allroad",
+      "average": 53740.71,
+      "median": 54340,
+      "stdDev": 2946.98,
+      "pVariance": 7444031.63
+    },
+    {
+      "name": "A5",
+      "average": 53474.9,
+      "median": 53905,
+      "stdDev": 3867.86,
+      "pVariance": 14661208.49
+    },
+    {
+      "name": "A6",
+      "average": 63688.15,
+      "median": 63165,
+      "stdDev": 5257.37,
+      "pVariance": 26185287.39
+    },
+    {
+      "name": "A6 Allroad",
+      "average": 75651,
+      "median": 73060,
+      "stdDev": 3984.06,
+      "pVariance": 12698204
+    },
+    {
+      "name": "A7",
+      "average": 82650.83,
+      "median": 81825,
+      "stdDev": 2646.45,
+      "pVariance": 6711911.8
+    },
+    {
+      "name": "A8",
+      "average": 100985.41,
+      "median": 98970,
+      "stdDev": 5773.51,
+      "pVariance": 30555697.74
+    },
+    {
+      "name": "Coupe",
+      "average": 80045,
+      "median": 80045,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "e-tron",
+      "average": 75763.2,
+      "median": 72710,
+      "stdDev": 5236.14,
+      "pVariance": 26868848.76
+    },
+    {
+      "name": "Q3",
+      "average": 44193.13,
+      "median": 45517.5,
+      "stdDev": 3222.09,
+      "pVariance": 10299513.38
+    },
+    {
+      "name": "Q5",
+      "average": 52914.21,
+      "median": 52240,
+      "stdDev": 3240.36,
+      "pVariance": 10464016.16
+    },
+    {
+      "name": "Q5 e",
+      "average": 61956.15,
+      "median": 62460,
+      "stdDev": 3066.98,
+      "pVariance": 9044590.97
+    },
+    {
+      "name": "Q7",
+      "average": 69397.78,
+      "median": 70785,
+      "stdDev": 9186.97,
+      "pVariance": 83275258.11
+    },
+    {
+      "name": "Q8",
+      "average": 81833.65,
+      "median": 81825,
+      "stdDev": 4164.85,
+      "pVariance": 16678827.99
+    },
+    {
+      "name": "R8",
+      "average": 167016.25,
+      "median": 170792.5,
+      "stdDev": 9693.76,
+      "pVariance": 70476817.18
+    },
+    {
+      "name": "RS Q8",
+      "average": 139282.5,
+      "median": 137220,
+      "stdDev": 8207.8,
+      "pVariance": 50526106.25
+    },
+    {
+      "name": "S4",
+      "average": 64110.5,
+      "median": 64267.5,
+      "stdDev": 3021.32,
+      "pVariance": 8215582.25
+    },
+    {
+      "name": "S5",
+      "average": 68193.33,
+      "median": 67415,
+      "stdDev": 2710.45,
+      "pVariance": 6856788.88
+    },
+    {
+      "name": "S6",
+      "average": 92740,
+      "median": 92740,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "S8",
+      "average": 153505,
+      "median": 153505,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "SQ5",
+      "average": 69078.51,
+      "median": 69320,
+      "stdDev": 4108.43,
+      "pVariance": 16367750.85
+    },
+    {
+      "name": "SQ7",
+      "average": 97579.44,
+      "median": 94365,
+      "stdDev": 6280.56,
+      "pVariance": 35062635.8
+    },
+    {
+      "name": "SQ8",
+      "average": 109243.33,
+      "median": 111855,
+      "stdDev": 5331.07,
+      "pVariance": 18946905.55
+    },
+    {
+      "name": "TT",
+      "average": 52215,
+      "median": 52215,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "TTS",
+      "average": 62923.75,
+      "median": 62882.5,
+      "stdDev": 650.74,
+      "pVariance": 317604.68
+    }
+  ]
+}

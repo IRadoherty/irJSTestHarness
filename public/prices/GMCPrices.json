@@ -1,0 +1,56 @@
+{
+  "brandName": "GMC",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "Acadia",
+      "average": 40846.6,
+      "median": 39611.5,
+      "stdDev": 7245.69,
+      "pVariance": 52352580.45
+    },
+    {
+      "name": "Canyon",
+      "average": 39068.49,
+      "median": 38715,
+      "stdDev": 5277.5,
+      "pVariance": 27746998.07
+    },
+    {
+      "name": "Savana",
+      "average": 39536.5,
+      "median": 39536.5,
+      "stdDev": 6807.31,
+      "pVariance": 23169782.25
+    },
+    {
+      "name": "Sierra",
+      "average": 60674.37,
+      "median": 58030,
+      "stdDev": 13767.7,
+      "pVariance": 189400638.57
+    },
+    {
+      "name": "Terrain",
+      "average": 32383.24,
+      "median": 31982.5,
+      "stdDev": 7262.7,
+      "pVariance": 52258478.97
+    },
+    {
+      "name": "Yukon",
+      "average": 75855.11,
+      "median": 77045,
+      "stdDev": 8600.52,
+      "pVariance": 73548811.63
+    },
+    {
+      "name": "Yukon XL",
+      "average": 75689.86,
+      "median": 73360,
+      "stdDev": 8195.01,
+      "pVariance": 65343184.44
+    }
+  ]
+}

@@ -1,0 +1,807 @@
+{
+  "AcuraPrices": {
+    "brandName": "Acura",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "ILX",
+        "average": 29737.73,
+        "median": 29625,
+        "stdDev": 1550.44,
+        "pVariance": 2388756.82
+      },
+      {
+        "name": "MDX",
+        "average": 55264.68,
+        "median": 53125,
+        "stdDev": 4276.97,
+        "pVariance": 18147343.94
+      },
+      {
+        "name": "RDX",
+        "average": 45358.29,
+        "median": 45825,
+        "stdDev": 2816.4,
+        "pVariance": 7913231.32
+      },
+      {
+        "name": "TL",
+        "average": 10999,
+        "median": 10999,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "TLX",
+        "average": 47812.25,
+        "median": 47325,
+        "stdDev": 4253.56,
+        "pVariance": 17918882.15
+      },
+      {
+        "name": "TSX",
+        "average": 15999,
+        "median": 15999,
+        "stdDev": 0,
+        "pVariance": 0
+      }
+    ]
+  },
+  "AudiPrices": {
+    "brandName": "Audi",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "A4",
+        "average": 46021.66,
+        "median": 43967.5,
+        "stdDev": 3258.32,
+        "pVariance": 10518365.27
+      },
+      {
+        "name": "A4 allroad",
+        "average": 53740.71,
+        "median": 54340,
+        "stdDev": 2946.98,
+        "pVariance": 7444031.63
+      },
+      {
+        "name": "A5",
+        "average": 53474.9,
+        "median": 53905,
+        "stdDev": 3867.86,
+        "pVariance": 14661208.49
+      },
+      {
+        "name": "A6",
+        "average": 63688.15,
+        "median": 63165,
+        "stdDev": 5257.37,
+        "pVariance": 26185287.39
+      },
+      {
+        "name": "A6 Allroad",
+        "average": 75651,
+        "median": 73060,
+        "stdDev": 3984.06,
+        "pVariance": 12698204
+      },
+      {
+        "name": "A7",
+        "average": 82650.83,
+        "median": 81825,
+        "stdDev": 2646.45,
+        "pVariance": 6711911.8
+      },
+      {
+        "name": "A8",
+        "average": 100985.41,
+        "median": 98970,
+        "stdDev": 5773.51,
+        "pVariance": 30555697.74
+      },
+      {
+        "name": "Coupe",
+        "average": 80045,
+        "median": 80045,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "e-tron",
+        "average": 75763.2,
+        "median": 72710,
+        "stdDev": 5236.14,
+        "pVariance": 26868848.76
+      },
+      {
+        "name": "Q3",
+        "average": 44193.13,
+        "median": 45517.5,
+        "stdDev": 3222.09,
+        "pVariance": 10299513.38
+      },
+      {
+        "name": "Q5",
+        "average": 52914.21,
+        "median": 52240,
+        "stdDev": 3240.36,
+        "pVariance": 10464016.16
+      },
+      {
+        "name": "Q5 e",
+        "average": 61956.15,
+        "median": 62460,
+        "stdDev": 3066.98,
+        "pVariance": 9044590.97
+      },
+      {
+        "name": "Q7",
+        "average": 69397.78,
+        "median": 70785,
+        "stdDev": 9186.97,
+        "pVariance": 83275258.11
+      },
+      {
+        "name": "Q8",
+        "average": 81833.65,
+        "median": 81825,
+        "stdDev": 4164.85,
+        "pVariance": 16678827.99
+      },
+      {
+        "name": "R8",
+        "average": 167016.25,
+        "median": 170792.5,
+        "stdDev": 9693.76,
+        "pVariance": 70476817.18
+      },
+      {
+        "name": "RS Q8",
+        "average": 139282.5,
+        "median": 137220,
+        "stdDev": 8207.8,
+        "pVariance": 50526106.25
+      },
+      {
+        "name": "S4",
+        "average": 64110.5,
+        "median": 64267.5,
+        "stdDev": 3021.32,
+        "pVariance": 8215582.25
+      },
+      {
+        "name": "S5",
+        "average": 68193.33,
+        "median": 67415,
+        "stdDev": 2710.45,
+        "pVariance": 6856788.88
+      },
+      {
+        "name": "S6",
+        "average": 92740,
+        "median": 92740,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "S8",
+        "average": 153505,
+        "median": 153505,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "SQ5",
+        "average": 69078.51,
+        "median": 69320,
+        "stdDev": 4108.43,
+        "pVariance": 16367750.85
+      },
+      {
+        "name": "SQ7",
+        "average": 97579.44,
+        "median": 94365,
+        "stdDev": 6280.56,
+        "pVariance": 35062635.8
+      },
+      {
+        "name": "SQ8",
+        "average": 109243.33,
+        "median": 111855,
+        "stdDev": 5331.07,
+        "pVariance": 18946905.55
+      },
+      {
+        "name": "TT",
+        "average": 52215,
+        "median": 52215,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "TTS",
+        "average": 62923.75,
+        "median": 62882.5,
+        "stdDev": 650.74,
+        "pVariance": 317604.68
+      }
+    ]
+  },
+  "ChevroletPrices":{
+  
+    "brandName": "Chevrolet",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "3500",
+        "average": 61199.86,
+        "median": 59587,
+        "stdDev": 15701.13,
+        "pVariance": 244859828.19
+      },
+      {
+        "name": "4500",
+        "average": 60762.28,
+        "median": 54597,
+        "stdDev": 11914.27,
+        "pVariance": 121671311.34
+      },
+      {
+        "name": "Blazer",
+        "average": 38339.47,
+        "median": 36867.5,
+        "stdDev": 6155.91,
+        "pVariance": 37409502.91
+      },
+      {
+        "name": "Bolt EV",
+        "average": 34078.67,
+        "median": 33510,
+        "stdDev": 1934.54,
+        "pVariance": 3727897.08
+      },
+      {
+        "name": "Camaro",
+        "average": 38097.75,
+        "median": 37110,
+        "stdDev": 6772.8,
+        "pVariance": 43577351.18
+      },
+      {
+        "name": "Colorado",
+        "average": 36439.65,
+        "median": 34945,
+        "stdDev": 6050.34,
+        "pVariance": 36501134.29
+      },
+      {
+        "name": "Corvette",
+        "average": 91216.38,
+        "median": 88130,
+        "stdDev": 17627.96,
+        "pVariance": 304769414.31
+      },
+      {
+        "name": "Equinox",
+        "average": 29058.58,
+        "median": 28427,
+        "stdDev": 3149.23,
+        "pVariance": 9865206.85
+      },
+      {
+        "name": "Express",
+        "average": 38769.58,
+        "median": 37133,
+        "stdDev": 10189.08,
+        "pVariance": 101155526.54
+      },
+      {
+        "name": "Impala",
+        "average": 31535,
+        "median": 31535,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "Malibu",
+        "average": 27311.5,
+        "median": 27311.5,
+        "stdDev": 1916.96,
+        "pVariance": 1837380.25
+      },
+      {
+        "name": "Silverado",
+        "average": 50770.01,
+        "median": 49525,
+        "stdDev": 10529.39,
+        "pVariance": 110822794.95
+      },
+      {
+        "name": "Sonic",
+        "average": 18101,
+        "median": 18101,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "Spark",
+        "average": 16081.48,
+        "median": 15695,
+        "stdDev": 1387.01,
+        "pVariance": 1874495.01
+      },
+      {
+        "name": "SSR",
+        "average": 28999,
+        "median": 28999,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "Suburban",
+        "average": 64962.77,
+        "median": 63485,
+        "stdDev": 8023.86,
+        "pVariance": 64169868.99
+      },
+      {
+        "name": "Tahoe",
+        "average": 64711.7,
+        "median": 63595,
+        "stdDev": 7830.27,
+        "pVariance": 61111452.49
+      },
+      {
+        "name": "TrailBlazer",
+        "average": 26758.02,
+        "median": 26825.5,
+        "stdDev": 3091.99,
+        "pVariance": 9522803.66
+      },
+      {
+        "name": "Traverse",
+        "average": 39842.23,
+        "median": 37703,
+        "stdDev": 6262.88,
+        "pVariance": 39174355.72
+      },
+      {
+        "name": "Trax",
+        "average": 22122.5,
+        "median": 22277.5,
+        "stdDev": 1945.06,
+        "pVariance": 3701022.68
+      }
+    ]
+  },
+  "DodgePrices":
+  {
+    "brandName": "Dodge",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "Challenger",
+        "average": 35055.71,
+        "median": 34180,
+        "stdDev": 16419.74,
+        "pVariance": 269019329.99
+      },
+      {
+        "name": "Charger",
+        "average": 38668.98,
+        "median": 38220,
+        "stdDev": 16933.05,
+        "pVariance": 286086932.94
+      },
+      {
+        "name": "Durango",
+        "average": 39138.01,
+        "median": 43750,
+        "stdDev": 22069.6,
+        "pVariance": 483984802.62
+      }
+    ]
+  },
+  "MitsubishiPrices": 
+    {
+    "brandName": "Mitsubishi",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "Eclipse",
+        "average": 26538,
+        "median": 26538,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "Eclipse Cross",
+        "average": 27250,
+        "median": 27720,
+        "stdDev": 1708.02,
+        "pVariance": 2188012.5
+      },
+      {
+        "name": "Mirage",
+        "average": 17927.37,
+        "median": 18159,
+        "stdDev": 1809.29,
+        "pVariance": 2864363.98
+      },
+      {
+        "name": "Mirage G4",
+        "average": 18995,
+        "median": 18995,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "Outlander",
+        "average": 34331.14,
+        "median": 34896.5,
+        "stdDev": 2094.87,
+        "pVariance": 4231755.69
+      },
+      {
+        "name": "Outlander Sport",
+        "average": 22074.66,
+        "median": 24495,
+        "stdDev": 4397.22,
+        "pVariance": 12890400.22
+      },
+      {
+        "name": "SP",
+        "average": 27518,
+        "median": 27518,
+        "stdDev": 0,
+        "pVariance": 0
+      }
+    ]
+  },
+  "GMCPrices":
+  {
+    "brandName": "GMC",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "Acadia",
+        "average": 40846.6,
+        "median": 39611.5,
+        "stdDev": 7245.69,
+        "pVariance": 52352580.45
+      },
+      {
+        "name": "Canyon",
+        "average": 39068.49,
+        "median": 38715,
+        "stdDev": 5277.5,
+        "pVariance": 27746998.07
+      },
+      {
+        "name": "Savana",
+        "average": 39536.5,
+        "median": 39536.5,
+        "stdDev": 6807.31,
+        "pVariance": 23169782.25
+      },
+      {
+        "name": "Sierra",
+        "average": 60674.37,
+        "median": 58030,
+        "stdDev": 13767.7,
+        "pVariance": 189400638.57
+      },
+      {
+        "name": "Terrain",
+        "average": 32383.24,
+        "median": 31982.5,
+        "stdDev": 7262.7,
+        "pVariance": 52258478.97
+      },
+      {
+        "name": "Yukon",
+        "average": 75855.11,
+        "median": 77045,
+        "stdDev": 8600.52,
+        "pVariance": 73548811.63
+      },
+      {
+        "name": "Yukon XL",
+        "average": 75689.86,
+        "median": 73360,
+        "stdDev": 8195.01,
+        "pVariance": 65343184.44
+      }
+    ]
+  },
+  "FordPrices":
+  {
+    "brandName": "Ford",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "Ecosport",
+        "average": "24994.63",
+        "median": "24545.0",
+        "stdDev": "2532.68",
+        "pVariance": "6395988.65"
+      },
+      {
+        "name": "Edge",
+        "average": "40468.74",
+        "median": "38215.0",
+        "stdDev": "5434.3",
+        "pVariance": "29421499.26"
+      },
+      {
+        "name": "Escape",
+        "average": "30235.51",
+        "median": "28995.0",
+        "stdDev": "4814.8",
+        "pVariance": "23147167.13"
+      },
+      {
+        "name": "Expedition",
+        "average": "70029.55",
+        "median": "70800.0",
+        "stdDev": "9231.26",
+        "pVariance": "84961155.16"
+      },
+      {
+        "name": "Explorer",
+        "average": "48455.23",
+        "median": "46195.0",
+        "stdDev": "9238.31",
+        "pVariance": "85255985.65"
+      },
+      {
+        "name": "F-150",
+        "average": "48594.28",
+        "median": "44905.0",
+        "stdDev": "14492.15",
+        "pVariance": "209906377.18"
+      },
+      {
+        "name": "F-250",
+        "average": "58871.65",
+        "median": "58547.5",
+        "stdDev": "16185.69",
+        "pVariance": "261352899.74"
+      },
+      {
+        "name": "F-350",
+        "average": "58335.27",
+        "median": "57065.0",
+        "stdDev": "16368.08",
+        "pVariance": "266723633.87"
+      },
+      {
+        "name": "F-450",
+        "average": "70233.69",
+        "median": "66402.5",
+        "stdDev": "14728.11",
+        "pVariance": "213043940.35"
+      },
+      {
+        "name": "Flex",
+        "average": "35507.36",
+        "median": "35175.0",
+        "stdDev": "2674.53",
+        "pVariance": "6776632.54"
+      },
+      {
+        "name": "Fusion",
+        "average": "29221.85",
+        "median": "28745.0",
+        "stdDev": "4266.69",
+        "pVariance": "18185804.96"
+      },
+      {
+        "name": "Mustang",
+        "average": "43189.29",
+        "median": "39345.0",
+        "stdDev": "17107.29",
+        "pVariance": "291875058.55"
+      },
+      {
+        "name": "Ranger",
+        "average": "33501.99",
+        "median": "32500.0",
+        "stdDev": "5702.51",
+        "pVariance": "32462400.7"
+      },
+      {
+        "name": "Superduty",
+        "average": "58290.0",
+        "median": "60795.0",
+        "stdDev": "16353.06",
+        "pVariance": "265076844.62"
+      },
+      {
+        "name": "Transit Connect",
+        "average": "33752.1",
+        "median": "29502.5",
+        "stdDev": "18598.1",
+        "pVariance": "345289026.4"
+      }
+    ]
+  },
+  "Jeeprices":
+  {
+    "brandName": "Jeep",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "Cherokee",
+        "average": 31585.34,
+        "median": 32845.5,
+        "stdDev": 15845.31,
+        "pVariance": 241417260.76
+      },
+      {
+        "name": "Compass",
+        "average": 29208.35,
+        "median": 29070,
+        "stdDev": 5014.63,
+        "pVariance": 24547861.89
+      },
+      {
+        "name": "Gladiator",
+        "average": 52000.71,
+        "median": 53295,
+        "stdDev": 11538.24,
+        "pVariance": 132820742.61
+      },
+      {
+        "name": "Grand Cherokee",
+        "average": 39250.84,
+        "median": 41690,
+        "stdDev": 12683.98,
+        "pVariance": 160599163.84
+      },
+      {
+        "name": "Renegade",
+        "average": 28804.12,
+        "median": 28512.5,
+        "stdDev": 2441.16,
+        "pVariance": 5897203.38
+      },
+      {
+        "name": "Wrangler",
+        "average": 51454.74,
+        "median": 53255,
+        "stdDev": 13206.81,
+        "pVariance": 174176976.41
+      }
+    ]
+  },
+  "ToyotaPrice": {
+    "brandName": "Toyota",
+    "regionName": "REGION_STATE_CA",
+    "condition": "new",
+    "data": [
+      {
+        "name": "Avalon",
+        "average": 31912.13,
+        "median": 42518,
+        "stdDev": 18747.61,
+        "pVariance": 346227057.1
+      },
+      {
+        "name": "Camry",
+        "average": 22966.66,
+        "median": 29491,
+        "stdDev": 14500.26,
+        "pVariance": 210131850.17
+      },
+      {
+        "name": "C-HR",
+        "average": 15242.62,
+        "median": 23291,
+        "stdDev": 12049.02,
+        "pVariance": 144217511.23
+      },
+      {
+        "name": "Corolla",
+        "average": 18728.27,
+        "median": 23719,
+        "stdDev": 9927.19,
+        "pVariance": 98395786.17
+      },
+      {
+        "name": "Highlander",
+        "average": 35946.91,
+        "median": 43758.5,
+        "stdDev": 18562.3,
+        "pVariance": 344028932.76
+      },
+      {
+        "name": "Land Cruiser",
+        "average": 88395,
+        "median": 88395,
+        "stdDev": 0,
+        "pVariance": 0
+      },
+      {
+        "name": "Mirai",
+        "average": 55085.81,
+        "median": 52569,
+        "stdDev": 5797.72,
+        "pVariance": 33417040.14
+      },
+      {
+        "name": "Prius",
+        "average": 21292.28,
+        "median": 26183,
+        "stdDev": 11791.58,
+        "pVariance": 137901784.51
+      },
+      {
+        "name": "Prius Prime",
+        "average": 28967.78,
+        "median": 31333,
+        "stdDev": 7977.55,
+        "pVariance": 62792753.63
+      },
+      {
+        "name": "Rav4",
+        "average": 27582.26,
+        "median": 31203.5,
+        "stdDev": 14614.39,
+        "pVariance": 213392282.76
+      },
+      {
+        "name": "Sequoia",
+        "average": 63670.96,
+        "median": 65699,
+        "stdDev": 12249,
+        "pVariance": 145198274.54
+      },
+      {
+        "name": "Sienna",
+        "average": 38663.97,
+        "median": 44003,
+        "stdDev": 16111.5,
+        "pVariance": 258338541.97
+      },
+      {
+        "name": "Supra",
+        "average": 53800.03,
+        "median": 56680,
+        "stdDev": 4744.01,
+        "pVariance": 21701865.74
+      },
+      {
+        "name": "Tacoma",
+        "average": 40842.15,
+        "median": 40697,
+        "stdDev": 5490.98,
+        "pVariance": 30093567.66
+      },
+      {
+        "name": "Tundra",
+        "average": 49988.64,
+        "median": 50351,
+        "stdDev": 7491.61,
+        "pVariance": 55742493.87
+      },
+      {
+        "name": "Venza",
+        "average": 32767.04,
+        "median": 37914,
+        "stdDev": 15465.24,
+        "pVariance": 238151812.23
+      }
+    ]
+  }
+  
+}

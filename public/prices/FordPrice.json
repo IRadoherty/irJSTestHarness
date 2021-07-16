@@ -1,0 +1,112 @@
+{
+  "brandName": "Ford",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "Ecosport",
+      "average": "24994.63",
+      "median": "24545.0",
+      "stdDev": "2532.68",
+      "pVariance": "6395988.65"
+    },
+    {
+      "name": "Edge",
+      "average": "40468.74",
+      "median": "38215.0",
+      "stdDev": "5434.3",
+      "pVariance": "29421499.26"
+    },
+    {
+      "name": "Escape",
+      "average": "30235.51",
+      "median": "28995.0",
+      "stdDev": "4814.8",
+      "pVariance": "23147167.13"
+    },
+    {
+      "name": "Expedition",
+      "average": "70029.55",
+      "median": "70800.0",
+      "stdDev": "9231.26",
+      "pVariance": "84961155.16"
+    },
+    {
+      "name": "Explorer",
+      "average": "48455.23",
+      "median": "46195.0",
+      "stdDev": "9238.31",
+      "pVariance": "85255985.65"
+    },
+    {
+      "name": "F-150",
+      "average": "48594.28",
+      "median": "44905.0",
+      "stdDev": "14492.15",
+      "pVariance": "209906377.18"
+    },
+    {
+      "name": "F-250",
+      "average": "58871.65",
+      "median": "58547.5",
+      "stdDev": "16185.69",
+      "pVariance": "261352899.74"
+    },
+    {
+      "name": "F-350",
+      "average": "58335.27",
+      "median": "57065.0",
+      "stdDev": "16368.08",
+      "pVariance": "266723633.87"
+    },
+    {
+      "name": "F-450",
+      "average": "70233.69",
+      "median": "66402.5",
+      "stdDev": "14728.11",
+      "pVariance": "213043940.35"
+    },
+    {
+      "name": "Flex",
+      "average": "35507.36",
+      "median": "35175.0",
+      "stdDev": "2674.53",
+      "pVariance": "6776632.54"
+    },
+    {
+      "name": "Fusion",
+      "average": "29221.85",
+      "median": "28745.0",
+      "stdDev": "4266.69",
+      "pVariance": "18185804.96"
+    },
+    {
+      "name": "Mustang",
+      "average": "43189.29",
+      "median": "39345.0",
+      "stdDev": "17107.29",
+      "pVariance": "291875058.55"
+    },
+    {
+      "name": "Ranger",
+      "average": "33501.99",
+      "median": "32500.0",
+      "stdDev": "5702.51",
+      "pVariance": "32462400.7"
+    },
+    {
+      "name": "Superduty",
+      "average": "58290.0",
+      "median": "60795.0",
+      "stdDev": "16353.06",
+      "pVariance": "265076844.62"
+    },
+    {
+      "name": "Transit Connect",
+      "average": "33752.1",
+      "median": "29502.5",
+      "stdDev": "18598.1",
+      "pVariance": "345289026.4"
+    }
+  ]
+}

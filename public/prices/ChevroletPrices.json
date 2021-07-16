@@ -1,0 +1,147 @@
+{
+  "brandName": "Chevrolet",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "3500",
+      "average": 61199.86,
+      "median": 59587,
+      "stdDev": 15701.13,
+      "pVariance": 244859828.19
+    },
+    {
+      "name": "4500",
+      "average": 60762.28,
+      "median": 54597,
+      "stdDev": 11914.27,
+      "pVariance": 121671311.34
+    },
+    {
+      "name": "Blazer",
+      "average": 38339.47,
+      "median": 36867.5,
+      "stdDev": 6155.91,
+      "pVariance": 37409502.91
+    },
+    {
+      "name": "Bolt EV",
+      "average": 34078.67,
+      "median": 33510,
+      "stdDev": 1934.54,
+      "pVariance": 3727897.08
+    },
+    {
+      "name": "Camaro",
+      "average": 38097.75,
+      "median": 37110,
+      "stdDev": 6772.8,
+      "pVariance": 43577351.18
+    },
+    {
+      "name": "Colorado",
+      "average": 36439.65,
+      "median": 34945,
+      "stdDev": 6050.34,
+      "pVariance": 36501134.29
+    },
+    {
+      "name": "Corvette",
+      "average": 91216.38,
+      "median": 88130,
+      "stdDev": 17627.96,
+      "pVariance": 304769414.31
+    },
+    {
+      "name": "Equinox",
+      "average": 29058.58,
+      "median": 28427,
+      "stdDev": 3149.23,
+      "pVariance": 9865206.85
+    },
+    {
+      "name": "Express",
+      "average": 38769.58,
+      "median": 37133,
+      "stdDev": 10189.08,
+      "pVariance": 101155526.54
+    },
+    {
+      "name": "Impala",
+      "average": 31535,
+      "median": 31535,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "Malibu",
+      "average": 27311.5,
+      "median": 27311.5,
+      "stdDev": 1916.96,
+      "pVariance": 1837380.25
+    },
+    {
+      "name": "Silverado",
+      "average": 50770.01,
+      "median": 49525,
+      "stdDev": 10529.39,
+      "pVariance": 110822794.95
+    },
+    {
+      "name": "Sonic",
+      "average": 18101,
+      "median": 18101,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "Spark",
+      "average": 16081.48,
+      "median": 15695,
+      "stdDev": 1387.01,
+      "pVariance": 1874495.01
+    },
+    {
+      "name": "SSR",
+      "average": 28999,
+      "median": 28999,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "Suburban",
+      "average": 64962.77,
+      "median": 63485,
+      "stdDev": 8023.86,
+      "pVariance": 64169868.99
+    },
+    {
+      "name": "Tahoe",
+      "average": 64711.7,
+      "median": 63595,
+      "stdDev": 7830.27,
+      "pVariance": 61111452.49
+    },
+    {
+      "name": "TrailBlazer",
+      "average": 26758.02,
+      "median": 26825.5,
+      "stdDev": 3091.99,
+      "pVariance": 9522803.66
+    },
+    {
+      "name": "Traverse",
+      "average": 39842.23,
+      "median": 37703,
+      "stdDev": 6262.88,
+      "pVariance": 39174355.72
+    },
+    {
+      "name": "Trax",
+      "average": 22122.5,
+      "median": 22277.5,
+      "stdDev": 1945.06,
+      "pVariance": 3701022.68
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "brandName": "Toyota",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "Avalon",
+      "average": 31912.13,
+      "median": 42518,
+      "stdDev": 18747.61,
+      "pVariance": 346227057.1
+    },
+    {
+      "name": "Camry",
+      "average": 22966.66,
+      "median": 29491,
+      "stdDev": 14500.26,
+      "pVariance": 210131850.17
+    },
+    {
+      "name": "C-HR",
+      "average": 15242.62,
+      "median": 23291,
+      "stdDev": 12049.02,
+      "pVariance": 144217511.23
+    },
+    {
+      "name": "Corolla",
+      "average": 18728.27,
+      "median": 23719,
+      "stdDev": 9927.19,
+      "pVariance": 98395786.17
+    },
+    {
+      "name": "Highlander",
+      "average": 35946.91,
+      "median": 43758.5,
+      "stdDev": 18562.3,
+      "pVariance": 344028932.76
+    },
+    {
+      "name": "Land Cruiser",
+      "average": 88395,
+      "median": 88395,
+      "stdDev": 0,
+      "pVariance": 0
+    },
+    {
+      "name": "Mirai",
+      "average": 55085.81,
+      "median": 52569,
+      "stdDev": 5797.72,
+      "pVariance": 33417040.14
+    },
+    {
+      "name": "Prius",
+      "average": 21292.28,
+      "median": 26183,
+      "stdDev": 11791.58,
+      "pVariance": 137901784.51
+    },
+    {
+      "name": "Prius Prime",
+      "average": 28967.78,
+      "median": 31333,
+      "stdDev": 7977.55,
+      "pVariance": 62792753.63
+    },
+    {
+      "name": "Rav4",
+      "average": 27582.26,
+      "median": 31203.5,
+      "stdDev": 14614.39,
+      "pVariance": 213392282.76
+    },
+    {
+      "name": "Sequoia",
+      "average": 63670.96,
+      "median": 65699,
+      "stdDev": 12249,
+      "pVariance": 145198274.54
+    },
+    {
+      "name": "Sienna",
+      "average": 38663.97,
+      "median": 44003,
+      "stdDev": 16111.5,
+      "pVariance": 258338541.97
+    },
+    {
+      "name": "Supra",
+      "average": 53800.03,
+      "median": 56680,
+      "stdDev": 4744.01,
+      "pVariance": 21701865.74
+    },
+    {
+      "name": "Tacoma",
+      "average": 40842.15,
+      "median": 40697,
+      "stdDev": 5490.98,
+      "pVariance": 30093567.66
+    },
+    {
+      "name": "Tundra",
+      "average": 49988.64,
+      "median": 50351,
+      "stdDev": 7491.61,
+      "pVariance": 55742493.87
+    },
+    {
+      "name": "Venza",
+      "average": 32767.04,
+      "median": 37914,
+      "stdDev": 15465.24,
+      "pVariance": 238151812.23
+    }
+  ]
+}

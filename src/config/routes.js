@@ -16,6 +16,10 @@ const ListPageDemo = lazy(() => import('../pages/ListPageDemo'))
 const TabsDemo = lazy(() => import('../pages/TabsDemo'))
 const MyAccount = lazy(() => import('../pages/MyAccount/MyAccount'))
 
+const ServiceBus = lazy(() => import('../pages/ServiceBus/ServiceBus'))
+const Dealership = lazy(() => import('../pages/Dealership/Dealership'))
+const GetVehiclePhoto = lazy(() => import('../pages/Dealership/GetVehiclePhoto'))
+
 const routes = [
   <UnauthorizedRoute path="/signin" redirectTo="/" exact component={SignIn} />,
   <UnauthorizedRoute path="/signup" redirectTo="/" exact component={SignUp} />,
@@ -33,6 +37,16 @@ const routes = [
   <AuthorizedRoute path="/filter_demo" exact component={FilterDemo} />,
   <AuthorizedRoute path="/list_page_demo" exact component={ListPageDemo} />,
   <AuthorizedRoute path="/tabs_demo" exact component={TabsDemo} />,
+
+  <AuthorizedRoute path="/ServiceBus" exact component={ServiceBus} />,
+  <AuthorizedRoute path="/Dealership" exact component={Dealership} />,
+  <AuthorizedRoute path="/GetVehiclePhoto" exact component={GetVehiclePhoto} />,
+
+
+
+
+
+
 ]
 
 export default routes

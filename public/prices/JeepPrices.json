@@ -1,0 +1,49 @@
+{
+  "brandName": "Jeep",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "Cherokee",
+      "average": 31585.34,
+      "median": 32845.5,
+      "stdDev": 15845.31,
+      "pVariance": 241417260.76
+    },
+    {
+      "name": "Compass",
+      "average": 29208.35,
+      "median": 29070,
+      "stdDev": 5014.63,
+      "pVariance": 24547861.89
+    },
+    {
+      "name": "Gladiator",
+      "average": 52000.71,
+      "median": 53295,
+      "stdDev": 11538.24,
+      "pVariance": 132820742.61
+    },
+    {
+      "name": "Grand Cherokee",
+      "average": 39250.84,
+      "median": 41690,
+      "stdDev": 12683.98,
+      "pVariance": 160599163.84
+    },
+    {
+      "name": "Renegade",
+      "average": 28804.12,
+      "median": 28512.5,
+      "stdDev": 2441.16,
+      "pVariance": 5897203.38
+    },
+    {
+      "name": "Wrangler",
+      "average": 51454.74,
+      "median": 53255,
+      "stdDev": 13206.81,
+      "pVariance": 174176976.41
+    }
+  ]
+}

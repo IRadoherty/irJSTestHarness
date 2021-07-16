@@ -1,0 +1,28 @@
+{
+  "brandName": "Dodge",
+  "regionName": "REGION_STATE_CA",
+  "condition": "new",
+  "data": [
+    {
+      "name": "Challenger",
+      "average": 35055.71,
+      "median": 34180,
+      "stdDev": 16419.74,
+      "pVariance": 269019329.99
+    },
+    {
+      "name": "Charger",
+      "average": 38668.98,
+      "median": 38220,
+      "stdDev": 16933.05,
+      "pVariance": 286086932.94
+    },
+    {
+      "name": "Durango",
+      "average": 39138.01,
+      "median": 43750,
+      "stdDev": 22069.6,
+      "pVariance": 483984802.62
+    }
+  ]
+}
