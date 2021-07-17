@@ -5,15 +5,9 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
-import InputLabel from '@material-ui/core/InputLabel'
-import FormHelperText from '@material-ui/core/FormHelperText'
-import FormControl from '@material-ui/core/FormControl'
-import NativeSelect from '@material-ui/core/NativeSelect'
-import { useSnackbar } from 'notistack'
 import axios from 'axios'
 import XMLParser from 'react-xml-parser'
 import TextField from '@material-ui/core/TextField'
-import {Link} from 'react-router-dom'
 
     const useStyles = makeStyles((theme) => ({
         container: {
@@ -39,37 +33,24 @@ import {Link} from 'react-router-dom'
 const GetVehiclePhoto = () => {
     useEffect(() => { setCarImage("../img/CoveredCar.png")
     },[])
-    const PrettyPrintJson = ({data}) => (<div><pre>{JSON.stringify(data, null, 2) }</pre></div>);
-    
+
     const classes = useStyles()
     const intl = useIntl()
     var [carImage, setCarImage] = useState()
     var [vehicleMake, setVehicleMake] = useState()
     var [vehicleModel, setVehicleModel] = useState()
     var [carImageURL, setCarImageURL] = useState()
-    var [GETXML, setGETXML] = useState()
-    var [gasPrice, setGasPrice] = useState()
-    var [gasPriceURL, setGasPriceURL] = useState()
+
     const CarImage = () => {
         setCarImageURL('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake + " " +vehicleModel)
         axios.get('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake + " " +vehicleModel).then((formRes) => {
             
             var xml = new XMLParser().parseFromString(formRes.data); 
-            setGETXML(JSON.stringify(formRes))
+
             setCarImage(xml.value)
         })
     }
-        const GetGasPrice = () => {
-            setGasPriceURL('https://api.collectapi.com/gasPrice/stateUsaPrice')
-            axios.get('https://api.collectapi.com/gasPrice/stateUsaPrice',
-            { 
-                headers: 
-                    { 'Authorization': 'apikey 4vJyaODQdayDjVHDmt8Fx0:2v1Z6BSSz1tgBktvJ2uz7E'} }).then((formRes) => {
-                
-         
-                setGasPrice(JSON.stringify(formRes.data))
-            })
-    }
+
 
     return (
         
@@ -82,7 +63,7 @@ const GetVehiclePhoto = () => {
             
             <Container className={classes.container}>
 
-            <img className={classes.carTop} src= {carImage} /> <br/>
+            <img className={classes.carTop} alt="Car" src= {carImage} /> <br/>
             <br/>
             <TextField className={classes.single} id="outlined-textarea" label="Make" placeholder="Make" multiline variant="outlined"
                  onInput={(e) => setVehicleMake(e.target.value)}  />
