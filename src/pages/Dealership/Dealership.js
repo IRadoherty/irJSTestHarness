@@ -78,10 +78,11 @@ const Dealership = () => {
     vehicle.MakeChoice = make; vehicle.ModelChoice = model; vehicle.YearChoice = year; vehicle.TransmissionChoice = transmission; vehicle.VID = VID
     var [ruleTime, setRuleTime] = useState()
     var [funcTime, setFuncTime] = useState()
-
+    var [useLog, setUseLog] = useState();
     useEffect(() => { 
         setMakes(window.vehicleMakeTable().map((make) => ( <option value={make.Value}>{make.Name}</option>))); 
-        setCarImage("../img/CoveredCar.png")     
+        setCarImage("../img/CoveredCar.png")   
+        setUseLog("No") 
     }, []);
 
     const CarImage = async (carChange) => { await axios.get('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + carChange).then((formRes) => {
@@ -119,7 +120,8 @@ const Dealership = () => {
      }
      const handleTransChange = (event) => { setTransmission(event.target.value)
         vehicle.TransmissionChoice = event.target.value; vehicle.VID = window.getVID(vehicle);
-        setVID(vehicle.VID); GetAllVehicleData(vehicle.VID); 
+        setVID(vehicle.VID); GetAllVehicleData(vehicle.VID);
+        if (useLog === "Yes") { handleTransChangeLOG(event)} 
         
     }
      const handleTransChangeLOG = (event) => { setTransmission(event.target.value)
@@ -154,7 +156,7 @@ const Dealership = () => {
 
             <br/>
             <Container className={classes.container}>
-            <img className={classes.carTop} src= {carImage} /> <br/> <br/>
+            <img className={classes.carTop} alt="Vehicle" src= {carImage} /> <br/> <br/>
 
             <FormControl className={classes.formControlMake}> <InputLabel htmlFor="age-native-helper">Make</InputLabel>
                 <NativeSelect id = "makes" onChange={handleMakeChange}> <option value={make} /> {makes} </NativeSelect>
