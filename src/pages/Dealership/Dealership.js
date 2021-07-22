@@ -85,7 +85,7 @@ const Dealership = () => {
         setUseLog("No") 
     }, []);
 
-    const CarImage = async (carChange) => { await axios.get('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + carChange).then((formRes) => {
+    const CarImage = async (carChange) => { await axios.get('https://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + carChange).then((formRes) => {
             var xml = new XMLParser().parseFromString(formRes.data); setCarImage(xml.value) })
     }
     const ruleStartT= () => {return performance.now()}; const ruleStopT= (t) => {setRuleTime(`Rule Execution Time: ${performance.now() - t}  ms.`)}
@@ -174,6 +174,14 @@ const Dealership = () => {
                 <NativeSelect id = "models" onChange={handleTransChange}> <option value={transmission} /> {transmissions} </NativeSelect>
             </FormControl> 
             <br/><br/>
+          
+            <div>{ruleTime} </div> <div>{funcTime} </div> <br/>
+            <div className={classes.notifications}> {notifications} </div>
+            <br/><br/>
+
+            <Button onClick={GetAllVehicleData} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Vehicle' })} </Button> <br/> <br/> 
+            <br/>
+            <Button onClick={PaymentRules} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Test' })} </Button> <br/> <br/> 
             <TextField id="outlined-textarea" label="Principal" placeholder="message" multiline variant="outlined"
                 value={principal} onInput={(e) => setPrincipal(e.target.value)} />
                 <br/><br/>
@@ -183,14 +191,6 @@ const Dealership = () => {
             <TextField id="outlined-textarea" label="Term in Months" placeholder="message" multiline variant="outlined"
                 value={termInMonths} onInput={(e) => setTermInMonths(e.target.value)} />
             <br/><br/>
-            <div>{ruleTime} </div> <div>{funcTime} </div> <br/>
-            <div className={classes.notifications}> {notifications} </div>
-            <br/><br/>
-
-            <Button onClick={GetAllVehicleData} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Vehicle' })} </Button> <br/> <br/> 
-
-            <Button onClick={PaymentRules} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Test' })} </Button> <br/> <br/> 
-
           <div> {vehicleLog} </div>
             </Container>
             
