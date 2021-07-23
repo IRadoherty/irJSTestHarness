@@ -91,7 +91,7 @@ const DealershipRES = () => {
     const handleMakeChange = (event) => { var f = funcStartT(); setMake( event.target.value); vehicle.MakeChoice = event.target.value
         setYears(""); setYear(""); setTransmissions(""); setTransmission(""); 
         var t = ruleStartT();
-         
+
         const modelList = window.getModels(vehicle); ruleStopT(t)
 
         const filteredArr = modelList.reduce((acc, current) => { const x = acc.find(item => item.model === current.model)
@@ -116,19 +116,38 @@ const DealershipRES = () => {
         setNotifications(""); funcStopT(f)    
       
      }
-     const handleTransChange = (event) => { setTransmission(event.target.value)
-        vehicle.TransmissionChoice = event.target.value; vehicle.VID = window.getVID(vehicle);
-        setVID(vehicle.VID); GetAllVehicleData(vehicle.VID);
-        if (useLog === "Yes") { handleTransChangeLOG(event)} 
-        
+
+
+     const handleTransChange = async (event) => { setTransmission(event.target.value)
+        vehicle.TransmissionChoice = event.target.value
+        let config = { headers: { 
+            'Access-Control-Allow-Origin': "*",
+            Accept: "application/json",
+            'Content-Type': "application/json"
+        } }
+
+        let data = {
+            RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" }
+            },
+            EntityName: "Dealership",
+            RuleSetName: "GetVID",
+            EntityState: "{\"vehicle\":{ \"MakeChoice\": \"Acura\", \"ModelChoice\": \"Legend\", \"YearChoice\": 1993,\"transmissionChoice\": \"Manual 5-spd\"}}"
+        }
+        await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', data, config).then((formRes) => {
+            console.log(formRes.data)
+            if (useLog === "Yes") { handleTransChangeLOG(event)} 
+        })
     }
-     const handleTransChangeLOG = (event) => { setTransmission(event.target.value)
+
+     const handleTransChangeLOG =  (event) => { setTransmission(event.target.value)
+        
         vehicle.TransmissionChoice = event.target.value; var VIDObject = window.getVID(vehicle)
         setVID(VIDObject.VID); console.log(VIDObject.VID); setVehicleLog(VIDObject.log); 
         console.log(VIDObject.VID, vehicle.make, vehicle.model, vehicle.year, vehicle.transmission)
         GetAllVehicleData(VIDObject.VID)
 
     }
+    
     const GetAllVehicleData = (VID) => {var f = funcStartT(); 
         if( make !==null | year !==null  | transmission !==null | model !==null ) { vehicle.VID = VID; 
             var t = ruleStartT(); const  tempNotifications = window.GetAllVehicleData(vehicle); ruleStopT(t)
@@ -137,7 +156,6 @@ const DealershipRES = () => {
         }
     }
     const PaymentRules = () => {
-    
         vehicle.LoanInfo.Principal = 21000
         vehicle.LoanInfo.APR = 6
         vehicle.LoanInfo.TermInYears = 6
