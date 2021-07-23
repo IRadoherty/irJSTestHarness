@@ -90,7 +90,10 @@ const DealershipRES = () => {
 
     const handleMakeChange = (event) => { var f = funcStartT(); setMake( event.target.value); vehicle.MakeChoice = event.target.value
         setYears(""); setYear(""); setTransmissions(""); setTransmission(""); 
-        var t = ruleStartT(); const modelList = window.getModels(vehicle); ruleStopT(t)
+        var t = ruleStartT();
+         
+        const modelList = window.getModels(vehicle); ruleStopT(t)
+
         const filteredArr = modelList.reduce((acc, current) => { const x = acc.find(item => item.model === current.model)
             if (!x) { return acc.concat([current]) } else { return acc } }, [])
         setModels(filteredArr.map((_model) => ( <option value={_model.model}>{_model.Model}</option>))) 

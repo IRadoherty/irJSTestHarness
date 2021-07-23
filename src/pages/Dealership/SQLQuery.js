@@ -30,7 +30,7 @@ const DealershipRES = () => {
     <Page>
         <Container>
             
-        <Button onClick={constSQL} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Vehicle' })} </Button> <br/> <br/> 
+        <Button onClick={constSQL} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Test SQL' })} </Button> <br/> <br/> 
                 <br/>
             <div>{constSQL}</div>
 
