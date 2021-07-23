@@ -110,11 +110,20 @@ const getMenuItems = (props) => {
       leftIcon: <Web />,
       nestedItems: [
         {
-          value: '/Dealership',
+          value: '/DealershipirJS',
           visible: isAuthorised,
           primaryText: intl.formatMessage({
-            id: 'Dealership',
-            defaultMessage: 'Dealership',
+            id: 'DealershipirJS',
+            defaultMessage: 'DealershipirJS',
+          }),
+          leftIcon: <ChatBubble />,
+        },
+        {
+          value: '/DealershipRES',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'DealershipRES',
+            defaultMessage: 'DealershipRES',
           }),
           leftIcon: <ChatBubble />,
         },
@@ -140,6 +149,31 @@ const getMenuItems = (props) => {
           primaryText: intl.formatMessage({
             id: 'ServiceBus',
             defaultMessage: 'ServiceBus',
+          }),
+          leftIcon: <ChatBubble />,
+        },
+        {
+          value: '/SQLQuery',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'SQLQuery',
+            defaultMessage: 'SQLQuery',
+          }),
+          leftIcon: <ChatBubble />,
+        }
+      ]
+    },
+    {
+      primaryText: intl.formatMessage({ id: 'testPages', defaultMessage: 'Test pages' }),
+      primaryTogglesNestedList: true,
+      leftIcon: <Web />,
+      nestedItems: [
+        {
+          value: '/GetVehiclePhoto',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'GetVehiclePhoto',
+            defaultMessage: 'GetVehiclePhoto',
           }),
           leftIcon: <ChatBubble />,
         }
@@ -197,6 +231,7 @@ const getMenuItems = (props) => {
         },
       ],
     },
+
     {
       value: '/about',
       visible: true,

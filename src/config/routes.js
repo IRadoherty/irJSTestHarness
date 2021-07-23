@@ -17,18 +17,16 @@ const TabsDemo = lazy(() => import('../pages/TabsDemo'))
 const MyAccount = lazy(() => import('../pages/MyAccount/MyAccount'))
 
 const ServiceBus = lazy(() => import('../pages/ServiceBus/ServiceBus'))
-const Dealership = lazy(() => import('../pages/Dealership/Dealership'))
+const DealershipirJS = lazy(() => import('../pages/Dealership/DealershipirJS'))
+const DealershipRES = lazy(() => import('../pages/Dealership/DealershipRES'))
+
 const GetVehiclePhoto = lazy(() => import('../pages/Dealership/GetVehiclePhoto'))
+const SQLQuery = lazy(() => import('../pages/Dealership/SQLQuery'))
 
 const routes = [
   <UnauthorizedRoute path="/signin" redirectTo="/" exact component={SignIn} />,
   <UnauthorizedRoute path="/signup" redirectTo="/" exact component={SignUp} />,
-  <UnauthorizedRoute
-    path="/password_reset"
-    redirectTo="/"
-    exact
-    component={PasswordReset}
-  />,
+  <UnauthorizedRoute path="/password_reset" redirectTo="/" exact component={PasswordReset} />,
   <Route path="/about" exact component={About} />,
   <AuthorizedRoute path="/my_account" exact component={MyAccount} />,
   <AuthorizedRoute path="/home" exact component={Home} />,
@@ -39,9 +37,11 @@ const routes = [
   <AuthorizedRoute path="/tabs_demo" exact component={TabsDemo} />,
 
   <AuthorizedRoute path="/ServiceBus" exact component={ServiceBus} />,
-  <AuthorizedRoute path="/Dealership" exact component={Dealership} />,
-  <AuthorizedRoute path="/GetVehiclePhoto" exact component={GetVehiclePhoto} />,
+  <AuthorizedRoute path="/DealershipirJS" exact component={DealershipirJS} />,
+  <AuthorizedRoute path="/DealershipRES" exact component={DealershipRES} />,
 
+  <AuthorizedRoute path="/GetVehiclePhoto" exact component={GetVehiclePhoto} />,
+  <AuthorizedRoute path="/SQLQuery" exact component={SQLQuery} />,
 
 
 

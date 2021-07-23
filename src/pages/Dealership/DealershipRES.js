@@ -59,7 +59,7 @@ import XMLParser from 'react-xml-parser';
         }
     } ))
 
-const Dealership = () => {
+const DealershipRES = () => {
 
     const classes = useStyles()
     const intl = useIntl()
@@ -70,14 +70,11 @@ const Dealership = () => {
     var [transmissions, setTransmissions] = useState(); var [transmission, setTransmission] = useState()
     var [VID, setVID] = useState()
     var [vehicleLog, setVehicleLog] = useState(); var [notifications, setNotifications] = useState()
-    var [principal, setPrincipal] = useState();
-    var [APR, setAPR] = useState();
+    var [principal, setPrincipal] = useState(); var [APR, setAPR] = useState();
     var [termInMonths, setTermInMonths] = useState();
-    var vehicle = {}; 
-    vehicle.LoanInfo = {}; 
+    var vehicle = {};  vehicle.LoanInfo = {}; 
     vehicle.MakeChoice = make; vehicle.ModelChoice = model; vehicle.YearChoice = year; vehicle.TransmissionChoice = transmission; vehicle.VID = VID
-    var [ruleTime, setRuleTime] = useState()
-    var [funcTime, setFuncTime] = useState()
+    var [ruleTime, setRuleTime] = useState(); var [funcTime, setFuncTime] = useState()
     var [useLog, setUseLog] = useState();
     useEffect(() => { 
         setMakes(window.vehicleMakeTable().map((make) => ( <option value={make.Value}>{make.Name}</option>))); 
@@ -94,12 +91,10 @@ const Dealership = () => {
     const handleMakeChange = (event) => { var f = funcStartT(); setMake( event.target.value); vehicle.MakeChoice = event.target.value
         setYears(""); setYear(""); setTransmissions(""); setTransmission(""); 
         var t = ruleStartT(); const modelList = window.getModels(vehicle); ruleStopT(t)
-
         const filteredArr = modelList.reduce((acc, current) => { const x = acc.find(item => item.model === current.model)
             if (!x) { return acc.concat([current]) } else { return acc } }, [])
         setModels(filteredArr.map((_model) => ( <option value={_model.model}>{_model.Model}</option>))) 
         setNotifications(""); funcStopT(f)
-        
     }
 
     const handleModelChange = (event) => {var f = funcStartT();  setModel(event.target.value); vehicle.ModelChoice = event.target.value
@@ -197,4 +192,4 @@ const Dealership = () => {
         </Page>
         )
 }
-export default Dealership
+export default DealershipRES
