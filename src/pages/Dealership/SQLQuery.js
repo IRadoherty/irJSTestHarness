@@ -1,68 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useIntl } from 'react-intl'
 import Page from 'material-ui-shell/lib/containers/Page'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
-
-
-    const useStyles = makeStyles((theme) => ({
-        container: {
-            marginLeft: theme.spacing(5),
-            marginRight: theme.spacing(5),
-            marginTop: theme.spacing(5),
-            
-        },
-        PageTopText: {
-            marginLeft: theme.spacing(5),
-            marginRight: theme.spacing(5),
-            marginTop: theme.spacing(5),
-            width: '550px'
-        },
-        formControlMake: {
-            marginLeft: theme.spacing(1),
-            'min-width': '60px',
-        },
-        formControlModel: {
-            marginLeft: theme.spacing(1),
-            'min-width': '100px',
-        },
-        formControlYear: {
-            marginLeft: theme.spacing(1),
-            'min-width': '60px',
-        },
-        formControlTrans: {
-            marginLeft: theme.spacing(1),
-            'min-width': '120px',
-        },
-        logging:{
-            width: '450px',
-            left: '400px',
-            'margin-top': '-308px',
-            position: 'relative'
-          },
-          carTop:{
-            width: '550px !important',
-            height: '280px !important'
-          },
-          Page:{
-              'background': 'white !important'
-          },
-          notifications:{
-            width: '550px'
-        }
-    } ))
 
 
     
     
 const DealershipRES = () => {
 
-    const classes = useStyles()
-    const intl = useIntl()
 
-    var [bodySQL, setBodySQL] = useState()
+    const intl = useIntl()
     const sql = require('mssql')
     const constSQL = async () => {
         
