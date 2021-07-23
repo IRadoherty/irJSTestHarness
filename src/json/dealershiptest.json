@@ -1,0 +1,8 @@
+{
+    "vehicle":{
+        "makeChoice": "Acura",
+        "modelChoice": "Legend",
+        "yearChoice": 1993,
+        "transmissionChoice": "Manual 5-spd"
+    }
+}
