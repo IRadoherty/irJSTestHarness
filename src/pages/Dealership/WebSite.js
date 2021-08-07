@@ -67,7 +67,7 @@ const WebSite= () => {
     useEffect(() => { 
         setCarImage("../img/CoveredCar.png");
         setMakes(window.vehicleMakeTable().map((make) => ( <option value={make.Value}>{make.Name}</option>))); 
-         setUseLog("No"); setVIDCount(window.getVIDCount())
+        setVIDCount(window.getVIDCount())
     }, []);
 
     const classes = useStyles()
@@ -83,7 +83,6 @@ const WebSite= () => {
     var vehicle = {}; vehicle.LoanInfo = {}; 
     vehicle.MakeChoice = make; vehicle.ModelChoice = model; vehicle.YearChoice = year; vehicle.TransmissionChoice = transmission; vehicle.VID = VID
     var [ruleTime, setRuleTime] = useState(); var [funcTime, setFuncTime] = useState()
-    var [useLog, setUseLog] = useState();
     var [VIDCount, setVIDCount] = useState()
     const CarImage = async (carChange) => { await axios.get('https://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + carChange).then((formRes) => {
             var xml = new XMLParser().parseFromString(formRes.data); setCarImage(xml.value) })
@@ -127,9 +126,7 @@ const WebSite= () => {
                funcStopT(f)
         }
     }
-    const PaymentRules = () => {
-        vehicle.LoanInfo.Principal = 21000; vehicle.LoanInfo.APR = 6; vehicle.LoanInfo.TermInYears = 6; var tempID = window.PaymentRules(vehicle); 
-        }
+
 
         //service bus
         const { ServiceBusClient }  = require("@azure/service-bus");

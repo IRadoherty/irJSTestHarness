@@ -2,18 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { useIntl } from 'react-intl'
 import Page from 'material-ui-shell/lib/containers/Page'
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
 import InputLabel from '@material-ui/core/InputLabel'
 import Input from '@material-ui/core/Input'
 import FormControl from '@material-ui/core/FormControl'
-import TextField from '@material-ui/core/TextField'
-import NativeSelect from '@material-ui/core/NativeSelect'
 import axios from 'axios'
 import XMLParser from 'react-xml-parser';
 import { useSnackbar } from 'notistack'
-import { ContactSupportOutlined } from '@material-ui/icons'
 import InputAdornment from '@material-ui/core/InputAdornment';
 
     const useStyles = makeStyles((theme) => ({
@@ -77,14 +73,13 @@ const Dealership= () => {
     const classes = useStyles()
     const intl = useIntl()
     const { enqueueSnackbar } = useSnackbar()
-    const [serviceBusReturn, setServiceBusReturn] = useState('')
     const { delay, ServiceBusClient }  = require("@azure/service-bus");
 
     var [make, setMake] = useState()
     var [model, setModel] = useState()
-    var [year, setYear] = useState()
+    var [year] = useState()
     var [transmission, setTransmission] = useState()
-    var [listPrice, setListPrice] = useState();
+    var [listPrice] = useState();
     var [principal, setPrincipal] = useState(); var [APR, setAPR] = useState(); var [termInMonths, setTermInMonths] = useState();
     var [tax, setTax] = useState(); var [title, setTitle] = useState();
     var [monthlyPayment, setMonthlyPayment] = useState(); var [totalCost, setTotalCost] = useState();
@@ -198,7 +193,7 @@ const Dealership= () => {
            
             <Container className={classes.container}>
              <br/> <br/>
-            <Button onClick={SBRecieveRun} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Check for new inquires' })} </Button> 
+            <Button onClick={SBRecieveRun} variant="contained" color="primary" > {intl.formatMessage({ id: 'SBRecieveRun', defaultMessage: 'Check for new inquires' })} </Button> 
 
             <br/><br/>
             <img className={classes.carTop} alt="Vehicle" src= {carImage} /> <br/> <br/>
@@ -239,7 +234,7 @@ const Dealership= () => {
         <br/><br/>
         <Button className={classes.margin} onClick={PaymentRules} variant="contained" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Recalculate Payment' })} </Button> 
         
-         <Button className={classes.margin} onClick={SBRecieveRun} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Car' })} </Button> <br/> <br/> 
+         <Button className={classes.margin} onClick={buyVehicle} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Car' })} </Button> <br/> <br/> 
           
           
             </Container>

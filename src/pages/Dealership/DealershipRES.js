@@ -69,17 +69,16 @@ const DealershipRES = () => {
     var [years, setYears] = useState(); var [year, setYear] = useState()
     var [transmissions, setTransmissions] = useState(); var [transmission, setTransmission] = useState()
     var [VID, setVID] = useState()
-    var [vehicleLog, setVehicleLog] = useState(); var [notifications, setNotifications] = useState()
+    var [notifications, setNotifications] = useState()
     var [principal, setPrincipal] = useState(); var [APR, setAPR] = useState();
     var [termInMonths, setTermInMonths] = useState();
     var vehicle = {};  vehicle.LoanInfo = {}; 
     vehicle.MakeChoice = make; vehicle.ModelChoice = model; vehicle.YearChoice = year; vehicle.TransmissionChoice = transmission; vehicle.VID = VID
     var [ruleTime, setRuleTime] = useState(); var [funcTime, setFuncTime] = useState()
-    var [useLog, setUseLog] = useState();
     useEffect(() => { 
         setMakes(window.vehicleMakeTable().map((make) => ( <option value={make.Value}>{make.Name}</option>))); 
         setCarImage("../img/CoveredCar.png")   
-        setUseLog("No") 
+
     }, []);
 
     const CarImage = async (carChange) => { await axios.get('https://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + carChange).then((formRes) => {
@@ -140,10 +139,6 @@ const DealershipRES = () => {
             GetAllVehicleData(vehicle.VID)
             console.log("vehicle.VID set to: " + vehicle.VID)
         })
-    }
-
-    const handleTransChangeLOG =  (event) => { setTransmission(event.target.value); vehicle.TransmissionChoice = event.target.value; var VIDObject = window.getVID(vehicle)
-        setVID(VIDObject.VID); console.log(VIDObject.VID); setVehicleLog(VIDObject.log); GetAllVehicleData(VIDObject.VID)
     }
     
     const GetAllVehicleData = async (VID) => {var f = funcStartT(); 
@@ -213,7 +208,6 @@ const DealershipRES = () => {
             <TextField id="outlined-textarea" label="Term in Months" placeholder="message" multiline variant="outlined"
                 value={termInMonths} onInput={(e) => setTermInMonths(e.target.value)} />
             <br/><br/>
-          <div> {vehicleLog} </div>
             </Container>
             
         </Page>
