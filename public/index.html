@@ -9,28 +9,37 @@
       name="description"
       content="InRule irJSTestHarness"
     />
-
+    <style type=“text/css”>
+      body{ background-color: #ffffff !important};
+      </style>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script src="%PUBLIC_URL%/DealershipRuleApplication.min.js"></script>
+    <script src="%PUBLIC_URL%/DealershipRuleApplication.min.js"></script> 
+    <!-- <script src="%PUBLIC_URL%/SCMServicingFeesPolicy.min.js"></script>-->
 
-
+    <script language="javascript">
+      function runMCAPPolicy(policy) { 
+        var session = inrule.createRuleSession();
+        session.createEntity('Transaction', policy);
+        session.applyRules(function(log){ } );
+      return policy;
+    } </script>
     
     <script language="javascript">
       function vehicleMakeTable() { 
         var session = inrule.createRuleSession();
-        var table = session.dataManager.getInlineTable('VehicleMinMakeTable', null);
+        var table = session.dataManager.getInlineTable('VehicleMakeTable', null);
       return table
     } </script>
 
   <script language="javascript">
     function getModels(vehicle) { 
       var session = inrule.createRuleSession();
-      var entity = session.createEntity('Dealership', vehicle);
+      entity = session.createEntity('Dealership', vehicle);
       entity.executeRuleSet('ListModels', [], function(log){ } );
     return vehicle.Models;
   } </script>
@@ -38,7 +47,7 @@
 <script language="javascript">
   function getYears(vehicle) { 
     var session = inrule.createRuleSession();
-    var entity = session.createEntity('Dealership', vehicle);
+    entity = session.createEntity('Dealership', vehicle);
     entity.executeRuleSet('ListYears', [], function(log){ } );
   return vehicle.Years;
 } </script>
@@ -46,7 +55,7 @@
 <script language="javascript">
   function getTransmissions(vehicle) { 
     var session = inrule.createRuleSession();
-    var entity = session.createEntity('Dealership', vehicle);
+    entity = session.createEntity('Dealership', vehicle);
     entity.executeRuleSet('ListTransmissions', [], function(log){ } );
   return vehicle.Transmissions;
 } </script>
@@ -54,9 +63,18 @@
 <script language="javascript">
   function getVID(vehicle) { 
     var session = inrule.createRuleSession();
-    var entity = session.createEntity('Dealership', vehicle);
+    entity = session.createEntity('Dealership', vehicle);
     entity.executeRuleSet('GetVID', [], function(log){ } );
     return vehicle.VID;
+} </script>
+
+<script language="javascript">
+  function getVIDCount() { 
+    var OffHandCounts = {}
+    var session = inrule.createRuleSession();
+    entity = session.createEntity('OffHandCounts', OffHandCounts);
+    entity.executeRuleSet('RuleSet1', [], function(log){ } );
+    return OffHandCounts.VIDCountTotal;
 } </script>
 
 <script language="javascript">
@@ -71,21 +89,26 @@
 <script language="javascript">
   function GetAllVehicleData(vehicle) { 
     var session = inrule.createRuleSession();
-    var entity = session.createEntity('Dealership', vehicle);
-    var notifications = session.getActiveNotifications();
+    entity = session.createEntity('Dealership', vehicle);
     entity.executeRuleSet('GetAllVehicleData', [], function(log){ } );
     var notifications = session.getActiveNotifications();
   return notifications;
 } </script>
 
 <script language="javascript">
+  function GetVehicleData(vehicle) { 
+    var session = inrule.createRuleSession();
+    entity = session.createEntity('Dealership', vehicle);
+    entity.executeRuleSet('GetAllVehicleData', [], function(log){ } );
+  return vehicle;
+} </script>
+
+<script language="javascript">
   function PaymentRules(vehicle) { 
     var session = inrule.createRuleSession();
-    var entity = session.createEntity('Vehicle', vehicle);
-    var notifications = session.getActiveNotifications();
+    entity = session.createEntity('Vehicle', vehicle);
     entity.executeRuleSet('PaymentRules', [], function(log){ } );
-    console.log(vehicle)
-  return notifications;
+  return vehicle;
 } </script>
 
 
