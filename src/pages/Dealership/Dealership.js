@@ -152,7 +152,6 @@ const Dealership= () => {
         const myErrorHandler = async (error) => {  }
         receiver.subscribe({ processMessage: myMessageHandler, processError:  myErrorHandler })
         await delay(1000); await receiver.close(); await sbClient.close()
-
     }
 
     const buyVehicle = async () => {
