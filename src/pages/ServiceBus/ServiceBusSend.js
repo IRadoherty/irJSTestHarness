@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button'
 import Page from 'material-ui-shell/lib/containers/Page'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useIntl } from 'react-intl'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
@@ -49,12 +49,8 @@ const ServiceBusSend = () => {
 
   const classes = useStyles()
   const intl = useIntl()
-  const [principal, setPrincipal] = useState('')
-  const [termInYears, setTermInYears] = useState('')
-  const [APR, setAPR] = useState('')
   const { ServiceBusClient } = require("@azure/service-bus")
   const [serviceBusMessage, setServiceBusMessage] = useState('')
-  const [error, setError] = useState('')
   
     const connectionString = "Endpoint=sb://road-adoherty-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=4xv4/5kWvSi3Ez/LLKNKnyoLS+78ERuCn2SVDHBcRPo="
     const queueName = "ciccdservicebusqueue"

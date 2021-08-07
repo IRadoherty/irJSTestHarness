@@ -88,72 +88,77 @@ const DealershipRES = () => {
     const ruleStartT= () => {return performance.now()}; const ruleStopT= (t) => {setRuleTime(`Rule Execution Time: ${performance.now() - t}  ms.`)}
     const funcStartT= () => {return performance.now()}; const funcStopT= (t) => {setFuncTime(`Function Execution Time: ${performance.now() - t}  ms.`)}
 
-    const handleMakeChange = (event) => { var f = funcStartT(); setMake( event.target.value); vehicle.MakeChoice = event.target.value
-        setYears(""); setYear(""); setTransmissions(""); setTransmission(""); 
-        var t = ruleStartT();
-
-        const modelList = window.getModels(vehicle); ruleStopT(t)
-
-        const filteredArr = modelList.reduce((acc, current) => { const x = acc.find(item => item.model === current.model)
+    const headers = { headers: { 'Access-Control-Allow-Origin': '*', 'Accept': 'application/json', 'Content-Type': 'application/json' } }
+    const handleMakeChange = async (event) => { var f = funcStartT(); setMake(event.target.value); vehicle.MakeChoice = event.target.value
+        setYears(""); setYear(""); setTransmissions(""); setTransmission(""); var t = ruleStartT(); var modelList = []
+        var ruleRequest = { RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" } }, EntityName: "Dealership", RuleSetName: "ListModels",
+            EntityState: "{ \"MakeChoice\": \"" + vehicle.MakeChoice +"\"}"
+        }
+        await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', ruleRequest, headers).then((formRes) => { modelList = JSON.parse(formRes.data.EntityState) })
+        ruleStopT(t)
+        const filteredArr = modelList.Models.reduce((acc, current) => { const x = acc.find(item => item.Model === current.Model)
             if (!x) { return acc.concat([current]) } else { return acc } }, [])
-        setModels(filteredArr.map((_model) => ( <option value={_model.model}>{_model.Model}</option>))) 
+        setModels(filteredArr.map((_model) => ( <option value={_model.Model}>{_model.Model}</option>))) 
         setNotifications(""); funcStopT(f)
+        console.log("vehicle.MakeChoice set to: " + vehicle.MakeChoice)
     }
 
-    const handleModelChange = (event) => {var f = funcStartT();  setModel(event.target.value); vehicle.ModelChoice = event.target.value
-       setTransmissions(""); setTransmission(""); vehicle.MakeChoice = make; 
-       var t = ruleStartT(); const yearList = window.getYears(vehicle); ruleStopT(t)
-        const filteredArr = yearList.reduce((acc, current) => { const x = acc.find(item => item.Year === current.Year);
+    const handleModelChange = async (event) => {var f = funcStartT();  setModel(event.target.value); vehicle.ModelChoice = event.target.value
+       setTransmissions(""); setTransmission(""); vehicle.MakeChoice = make; var yearList = []; var t = ruleStartT(); 
+       var ruleRequest = { RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" } }, EntityName: "Dealership", RuleSetName: "ListYears",
+            EntityState: "{ \"MakeChoice\": \"" + vehicle.MakeChoice +"\", \"ModelChoice\": \"" + vehicle.ModelChoice + "\"}"
+        }
+        await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', ruleRequest, headers).then((formRes) => { yearList = JSON.parse(formRes.data.EntityState) })
+        ruleStopT(t)
+        const filteredArr = yearList.Years.reduce((acc, current) => { const x = acc.find(item => item.Year === current.Year);
             if (!x) { return acc.concat([current]) } else { return acc } }, [])
-            setYears(filteredArr.map((_year) => ( <option value={_year.VYear}>{_year.Year}</option>))) 
+            setYears(filteredArr.map((_year) => ( <option value={_year.Year}>{_year.Year}</option>))) 
                  CarImage(make + " " + model); setNotifications(""); funcStopT(f)
+                 console.log("vehicle.ModelChoice set to: " + vehicle.ModelChoice)
       }
 
-      const handleYearChange = (event) => {var f = funcStartT();  setYear(event.target.value); setTransmissions(""); setTransmission("")
-        vehicle.MakeChoice = make; vehicle.YearChoice = event.target.value; vehicle.ModelChoice = model; 
-        var t = ruleStartT(); var transmissionList = window.getTransmissions(vehicle); ruleStopT(t)
-        setTransmissions(transmissionList.map((_trans) => ( <option value={_trans.trany}>{_trans.Transmission}</option>)))
+      const handleYearChange = async (event) => {var f = funcStartT();  setYear(event.target.value); setTransmissions(""); setTransmission("")
+        vehicle.MakeChoice = make; vehicle.YearChoice = event.target.value; vehicle.ModelChoice = model; var transmissionList = []; var t = ruleStartT();
+        var ruleRequest = { RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" } }, EntityName: "Dealership", RuleSetName: "ListTransmissions",
+            EntityState: "{\"MakeChoice\": \"" + vehicle.MakeChoice +"\", \"ModelChoice\": \"" + vehicle.ModelChoice +"\", \"YearChoice\": \"" + vehicle.YearChoice + "\"}"
+        }
+        await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', ruleRequest, headers).then((formRes) => { transmissionList = JSON.parse(formRes.data.EntityState) })
+        ruleStopT(t)
+        setTransmissions(transmissionList.Transmissions.map((_trans) => ( <option value={_trans.Transmission}>{_trans.Transmission}</option>)))
         setNotifications(""); funcStopT(f)    
-      
+        console.log("Dealership.YearChoice set to: " + vehicle.YearChoice)
      }
 
-     const handleTransChange = async (event) => { setTransmission(event.target.value)
-        vehicle.TransmissionChoice = event.target.value
-        let config = { headers: { 
-            'Access-Control-Allow-Origin': '*',
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-            'Access-Control-Allow-Headers': 'X-Requested-With,content-type',
-            'Access-Control-Allow-Credentials': 'true'
-        } }
-
-        let data = {
-            RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" } },
-            EntityName: "Dealership",
-            RuleSetName: "GetVID",
-            EntityState: "{\"vehicle\":{ \"MakeChoice\": \"Acura\", \"ModelChoice\": \"Legend\", \"YearChoice\": 1993,\"transmissionChoice\": \"Manual 5-spd\"}}"
+     const handleTransChange = async (event) => { setTransmission(event.target.value); vehicle.TransmissionChoice = event.target.value
+        var ruleRequest = { RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" } }, EntityName: "Dealership", RuleSetName: "GetVID",
+            EntityState: "{\"MakeChoice\": \"" + vehicle.MakeChoice +"\", \"ModelChoice\": \"" + vehicle.ModelChoice +"\", \"YearChoice\": " + vehicle.YearChoice +",\"TransmissionChoice\": \"" + vehicle.TransmissionChoice +"\"}"
         }
-        await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', data, config).then((formRes) => {
-            console.log(formRes.data)
-            if (useLog === "Yes") { handleTransChangeLOG(event)} 
+        await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', ruleRequest, headers).then((formRes) => {
+            vehicle = JSON.parse(formRes.data.EntityState)
+            console.log(formRes.data.EntityState)
+            setVID(vehicle.VID)
+            GetAllVehicleData(vehicle.VID)
+            console.log("vehicle.VID set to: " + vehicle.VID)
         })
     }
 
-     const handleTransChangeLOG =  (event) => { setTransmission(event.target.value)
-        
-        vehicle.TransmissionChoice = event.target.value; var VIDObject = window.getVID(vehicle)
-        setVID(VIDObject.VID); console.log(VIDObject.VID); setVehicleLog(VIDObject.log); 
-        console.log(VIDObject.VID, vehicle.make, vehicle.model, vehicle.year, vehicle.transmission)
-        GetAllVehicleData(VIDObject.VID)
-
+    const handleTransChangeLOG =  (event) => { setTransmission(event.target.value); vehicle.TransmissionChoice = event.target.value; var VIDObject = window.getVID(vehicle)
+        setVID(VIDObject.VID); console.log(VIDObject.VID); setVehicleLog(VIDObject.log); GetAllVehicleData(VIDObject.VID)
     }
     
-    const GetAllVehicleData = (VID) => {var f = funcStartT(); 
-        if( make !==null | year !==null  | transmission !==null | model !==null ) { vehicle.VID = VID; 
-            var t = ruleStartT(); const  tempNotifications = window.GetAllVehicleData(vehicle); ruleStopT(t)
-               setNotifications(tempNotifications.map((_notification) => <div>{_notification.message}</div>))
-               funcStopT(f)
+    const GetAllVehicleData = async (VID) => {var f = funcStartT(); 
+        if( make !==null | year !==null  | transmission !==null | model !==null ) { vehicle.VID = VID; var t = ruleStartT(); 
+            var ruleRequest = { RuleApp:{ "RepositoryRuleAppRevisionSpec":{ "RuleApplicationName": "DealershipApp" } }, EntityName: "Dealership", RuleSetName: "GetAllVehicleData",
+                EntityState: "{\"VID\":"+ vehicle.VID + "}"  
+            }
+            console.log(ruleRequest)
+            await axios.post('https://road-adoherty-irserver.azurewebsites.net/HttpService.svc/ExecuteRuleSet', ruleRequest, headers).then((formRes) => {
+            console.log(formRes.data.EntityState)
+
+            vehicle = JSON.parse(formRes.data.EntityState); 
+            const tempNotifications = window.GetAllVehicleData(vehicle); 
+                ruleStopT(t); setNotifications(tempNotifications.map((_notification) => <div>{_notification.message}</div>)); funcStopT(f)
+            })
         }
     }
     const PaymentRules = () => {

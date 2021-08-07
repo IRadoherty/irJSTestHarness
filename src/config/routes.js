@@ -19,6 +19,11 @@ const MyAccount = lazy(() => import('../pages/MyAccount/MyAccount'))
 const ServiceBus = lazy(() => import('../pages/ServiceBus/ServiceBus'))
 const DealershipirJS = lazy(() => import('../pages/Dealership/DealershipirJS'))
 const DealershipRES = lazy(() => import('../pages/Dealership/DealershipRES'))
+const MCAPPolicy = lazy(() => import('../pages/MCAP/MCAPPolicy'))
+
+const WebSite = lazy(() => import('../pages/Dealership/WebSite'))
+const Dealership = lazy(() => import('../pages/Dealership/Dealership'))
+const Finance = lazy(() => import('../pages/Dealership/Finance'))
 
 const GetVehiclePhoto = lazy(() => import('../pages/Dealership/GetVehiclePhoto'))
 const SQLQuery = lazy(() => import('../pages/Dealership/SQLQuery'))
@@ -39,7 +44,12 @@ const routes = [
   <AuthorizedRoute path="/ServiceBus" exact component={ServiceBus} />,
   <AuthorizedRoute path="/DealershipirJS" exact component={DealershipirJS} />,
   <AuthorizedRoute path="/DealershipRES" exact component={DealershipRES} />,
+  <AuthorizedRoute path="/MCAPPolicy" exact component={MCAPPolicy} />,
 
+  <AuthorizedRoute path="/WebSite" exact component={WebSite} />,
+  <AuthorizedRoute path="/Finance" exact component={Finance} />,
+  <AuthorizedRoute path="/Dealership" exact component={Dealership} />,
+  
   <AuthorizedRoute path="/GetVehiclePhoto" exact component={GetVehiclePhoto} />,
   <AuthorizedRoute path="/SQLQuery" exact component={SQLQuery} />,
 

@@ -108,6 +108,7 @@
     var session = inrule.createRuleSession();
     entity = session.createEntity('Vehicle', vehicle);
     entity.executeRuleSet('PaymentRules', [], function(log){ } );
+    console.log(vehicle)
   return vehicle;
 } </script>
 

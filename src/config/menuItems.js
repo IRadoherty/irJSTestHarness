@@ -128,14 +128,14 @@ const getMenuItems = (props) => {
           leftIcon: <ChatBubble />,
         },
         {
-          value: '/GetVehiclePhoto',
+          value: '/MCAPPolicy',
           visible: isAuthorised,
           primaryText: intl.formatMessage({
-            id: 'GetVehiclePhoto',
-            defaultMessage: 'GetVehiclePhoto',
+            id: 'MCAPPolicy',
+            defaultMessage: 'MCAP Policy',
           }),
           leftIcon: <ChatBubble />,
-        }
+        },
       ]
     },
     {
@@ -164,7 +164,41 @@ const getMenuItems = (props) => {
       ]
     },
     {
-      primaryText: intl.formatMessage({ id: 'testPages', defaultMessage: 'Test pages' }),
+      primaryText: intl.formatMessage({ id: 'Dealership', defaultMessage: 'Dealership' }),
+      primaryTogglesNestedList: true,
+      leftIcon: <Web />,
+      nestedItems: [
+        {
+          value: '/WebSite',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'WebSite',
+            defaultMessage: 'WebSite',
+          }),
+          leftIcon: <ChatBubble />,
+        },
+        {
+          value: '/Dealership',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'Dealership',
+            defaultMessage: 'Dealership',
+          }),
+          leftIcon: <ChatBubble />,
+        },
+        {
+          value: '/Finance',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'Finance',
+            defaultMessage: 'Finance',
+          }),
+          leftIcon: <ChatBubble />,
+        }
+      ]
+    },
+    {
+      primaryText: intl.formatMessage({ id: 'API', defaultMessage: 'API' }),
       primaryTogglesNestedList: true,
       leftIcon: <Web />,
       nestedItems: [
@@ -179,65 +213,65 @@ const getMenuItems = (props) => {
         }
       ]
     },
-    {
-      primaryText: intl.formatMessage({ id: 'demos', defaultMessage: 'Demos' }),
-      primaryTogglesNestedList: true,
-      leftIcon: <Web />,
-      nestedItems: [
-        {
-          value: '/dialog_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'dialog_demo',
-            defaultMessage: 'Dialog',
-          }),
-          leftIcon: <ChatBubble />,
-        },
-        {
-          value: '/toast_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'toast_demo',
-            defaultMessage: 'Toast',
-          }),
-          leftIcon: <QuestionAnswer />,
-        },
-        {
-          value: '/filter_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'filter_demo',
-            defaultMessage: 'Filter',
-          }),
-          leftIcon: <FilterList />,
-        },
-        {
-          value: '/list_page_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'list_page_demo_menu',
-            defaultMessage: 'List Page',
-          }),
-          leftIcon: <ViewList />,
-        },
-        {
-          value: '/tabs_demo',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'tabs_demo',
-            defaultMessage: 'Tabs Page',
-          }),
-          leftIcon: <Tab />,
-        },
-      ],
-    },
+    //{
+    //  primaryText: intl.formatMessage({ id: 'demos', defaultMessage: 'Demos' }),
+    //  primaryTogglesNestedList: true,
+    //  leftIcon: <Web />,
+    //  nestedItems: [
+    //    {
+    //      value: '/dialog_demo',
+    //      visible: isAuthorised,
+    //      primaryText: intl.formatMessage({
+    //        id: 'dialog_demo',
+    //        defaultMessage: 'Dialog',
+    //      }),
+    //      leftIcon: <ChatBubble />,
+    //    },
+    //    {
+    //      value: '/toast_demo',
+     //     visible: isAuthorised,
+    //      primaryText: intl.formatMessage({
+    //        id: 'toast_demo',
+    //        defaultMessage: 'Toast',
+    //      }),
+    //      leftIcon: <QuestionAnswer />,
+    //    },
+    //    {
+    //      value: '/filter_demo',
+    //      visible: isAuthorised,
+    //      primaryText: intl.formatMessage({
+    //        id: 'filter_demo',
+    //        defaultMessage: 'Filter',
+    //      }),
+    //      leftIcon: <FilterList />,
+    //    },
+    //    {
+    //      value: '/list_page_demo',
+    //      visible: isAuthorised,
+    //      primaryText: intl.formatMessage({
+    //        id: 'list_page_demo_menu',
+    //        defaultMessage: 'List Page',
+    //      }),
+   //       leftIcon: <ViewList />,
+   //     },
+   //     {
+   //       value: '/tabs_demo',
+   //       visible: isAuthorised,
+   //       primaryText: intl.formatMessage({
+   //         id: 'tabs_demo',
+   //         defaultMessage: 'Tabs Page',
+   //       }),
+   //       leftIcon: <Tab />,
+   //     },
+  //    ],
+ //   },
 
-    {
-      value: '/about',
-      visible: true,
-      primaryText: intl.formatMessage({ id: 'about' }),
-      leftIcon: <InfoOutlined />,
-    },
+   // {
+   //   value: '/about',
+   //   visible: true,
+  //    primaryText: intl.formatMessage({ id: 'about' }),
+  //    leftIcon: <InfoOutlined />,
+  //  },
     { divider: true },
     {
       primaryText: intl.formatMessage({ id: 'settings' }),

@@ -1,8 +1,6 @@
 import Button from '@material-ui/core/Button'
 import Page from 'material-ui-shell/lib/containers/Page'
-import React, { useState, useEffect } from 'react'
 import { useIntl } from 'react-intl'
-import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -52,7 +50,7 @@ const ServiceBusRecieve = () => {
 
 
 
-  const { delay, ServiceBusClient, ServiceBusMessage } = require("@azure/service-bus");
+  const { delay, ServiceBusClient } = require("@azure/service-bus");
 
 // connection string to your Service Bus namespace
     const connectionString = "Endpoint=sb://road-adoherty-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=4xv4/5kWvSi3Ez/LLKNKnyoLS+78ERuCn2SVDHBcRPo="

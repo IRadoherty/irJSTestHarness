@@ -58,7 +58,7 @@ const GetVehiclePhoto = () => {
             
             <br/> 
             <Typography component="h1" variant="h6" className = {classes.PageTopText}> {intl.formatMessage({ id: 'GetVehiclePhotoType', 
-                defaultMessage: 'This page emulates a GET request for an image for a given make and model.' })} </Typography>
+                defaultMessage: 'This page emulates a GET request to a SOAP API to retrieve a link to an image for a make and model.' })} </Typography>
             <br/>
             
             <Container className={classes.container}>
