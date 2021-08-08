@@ -38,12 +38,11 @@ const GetVehiclePhoto = () => {
     const intl = useIntl()
     var [carImage, setCarImage] = useState()
     var [vehicleMake, setVehicleMake] = useState()
-    var [vehicleModel, setVehicleModel] = useState()
     var [carImageURL, setCarImageURL] = useState()
 
     const CarImage = () => {
-        setCarImageURL('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake + " " +vehicleModel)
-        axios.get('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake + " " +vehicleModel).then((formRes) => {
+        setCarImageURL('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake)
+        axios.get('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake).then((formRes) => {
             
             var xml = new XMLParser().parseFromString(formRes.data); 
 
@@ -65,11 +64,9 @@ const GetVehiclePhoto = () => {
 
             <img className={classes.carTop} alt="Car" src= {carImage} /> <br/>
             <br/>
-            <TextField className={classes.single} id="outlined-textarea" label="Make" placeholder="Make" multiline variant="outlined"
+            <TextField className={classes.single} id="outlined-textarea" label="Make and Model" placeholder="Make and Model" multiline variant="outlined"
                  onInput={(e) => setVehicleMake(e.target.value)}  />
 
-            <TextField className={classes.single} id="outlined-textarea" label="Model" placeholder="Model" multiline variant="outlined"
-                 onInput={(e) => setVehicleModel(e.target.value)} />
                  <br/><br/>
         <div> {carImageURL}</div><br/>
             <br/>

@@ -125,7 +125,7 @@ const Dealership= () => {
         setMake(vehicle.Make); setModel(vehicle.Model); setTransmission(vehicle.Transmission); setInventory(vehicle.Inventory); 
         setTotalCost(vehicle.PaymentSummary.TotalCost); setMonthlyPayment(vehicle.PaymentSummary.MonthlyPayment);  setTitle(vehicle.LoanInfo.Title); setTax(vehicle.LoanInfo.Tax)
         CarImage(vehicle.Make + " " + vehicle.Model);
-        setMainText(`An inquiry for a ${vehicle.VYear} ${vehicle.Make} ${vehicle.Model} was just recieved. There are ${vehicle.Inventory} available.`)     
+        setMainText(`An inquiry for a ${vehicle.VYear} ${vehicle.Make} ${vehicle.Model}, VID: ${_VID}, was just recieved. There are ${vehicle.Inventory} available.`)     
           vehicleJSON = { 
             "vid": _VID,
             "make": vehicle.Make,
@@ -150,7 +150,7 @@ const Dealership= () => {
     }
 
     const buyVehicle = async () => {
-      let tempInventory = vehicle.Inventory - 1,
+      let tempInventory = vehicle.Inventory - 1,                                
       vehicleJSON = { 
         "vid": VID,
         "make": make,
