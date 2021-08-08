@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useIntl } from 'react-intl'
-import Page from 'material-ui-shell/lib/containers/Page'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
-import InputLabel from '@material-ui/core/InputLabel'
-import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
-import NativeSelect from '@material-ui/core/NativeSelect'
 import { blue } from '@material-ui/core/colors'
 
     const useStyles = makeStyles((theme) => ({
@@ -88,12 +84,11 @@ const MCAPPolicy = () => {
     var [BasisPoints, setBasisPoints] = useState()	
     var [FixedAmount, setFixedAmount] = useState()
     var [runCount, setRunCount] = useState()
-    var [todaysDate, setTodaysDate] = useState()
+    var [todaysDate] = useState()
     var policy = {}; 
 
     var [ruleTime, setRuleTime] = useState(); 
-    var [funcTime, setFuncTime] = useState()
-    var [useLog, setUseLog] = useState();
+    var [funcTime] = useState()
 
     const ruleStartT= () => {return performance.now()}; const ruleStopT= (t) => {setRuleTime(`Rule Execution Time: ${performance.now() - t}  ms.`)}
 
