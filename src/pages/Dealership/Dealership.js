@@ -200,7 +200,7 @@ const Dealership= () => {
 
             <br/> <div>{mainText}</div> <br/>
             <FormControl  className={classes.margin}>
-          <InputLabel htmlFor="standard-adornment-amount">Principal</InputLabel>
+          <InputLabel htmlFor="standard-adornment-amount">List Price</InputLabel>
           <Input id="standard-adornment-amount" onChange={e => principalChange(e.target.value)} value={principal} startAdornment={<InputAdornment position="start">$</InputAdornment>} />
         </FormControl>
         <FormControl  className={classes.margin}>
@@ -234,7 +234,7 @@ const Dealership= () => {
         <br/><br/>
         <Button className={classes.margin} onClick={PaymentRules} variant="contained" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Recalculate Payment' })} </Button> 
         
-         <Button className={classes.margin} onClick={buyVehicle} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Car' })} </Button> <br/> <br/> 
+        <Button className={classes.margin} onClick={buyVehicle} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Car' })} </Button> <br/> <br/> 
           
           
             </Container>

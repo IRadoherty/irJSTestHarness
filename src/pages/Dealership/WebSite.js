@@ -82,48 +82,47 @@ const WebSite= () => {
     var [notifications, setNotifications] = useState()
     var vehicle = {}; vehicle.LoanInfo = {}; 
     vehicle.MakeChoice = make; vehicle.ModelChoice = model; vehicle.YearChoice = year; vehicle.TransmissionChoice = transmission; vehicle.VID = VID
-    var [ruleTime, setRuleTime] = useState(); var [funcTime, setFuncTime] = useState()
+    var [ruleTime, setRuleTime] = useState();
     var [VIDCount, setVIDCount] = useState()
     const CarImage = async (carChange) => { await axios.get('https://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + carChange).then((formRes) => {
             var xml = new XMLParser().parseFromString(formRes.data); setCarImage(xml.value) })
     }
     const ruleStartT= () => {return performance.now()}; const ruleStopT= (t) => {setRuleTime(`Rule Execution Time: ${performance.now() - t}  ms.`)}
-    const funcStartT= () => {return performance.now()}; const funcStopT= (t) => {setFuncTime(`Function Execution Time: ${performance.now() - t}  ms.`)}
 
-    const handleMakeChange = (e) => { var f = funcStartT(); setMake( e.target.value); vehicle.MakeChoice = e.target.value
+    const handleMakeChange = (e) => {  setMake( e.target.value); vehicle.MakeChoice = e.target.value
         setYears(""); setYear(""); setTransmissions(""); setTransmission(""); 
         var t = ruleStartT(); const modelList = window.getModels(vehicle); ruleStopT(t)
         const filteredArr = modelList.reduce((acc, current) => { const x = acc.find(item => item.model === current.model)
             if (!x) { return acc.concat([current]) } else { return acc } }, [])
         setModels(filteredArr.map((_model) => ( <option value={_model.model}>{_model.Model}</option>))) 
-        setNotifications(""); funcStopT(f)
+        setNotifications(""); 
     }
 
-    const handleModelChange = (e) => {var f = funcStartT();  setModel(e.target.value); vehicle.ModelChoice = e.target.value
+    const handleModelChange = (e) => {  setModel(e.target.value); vehicle.ModelChoice = e.target.value
        setTransmissions(""); setTransmission(""); vehicle.MakeChoice = make; 
        var t = ruleStartT(); const yearList = window.getYears(vehicle); ruleStopT(t)
         const filteredArr = yearList.reduce((acc, current) => { const x = acc.find(item => item.Year === current.Year);
             if (!x) { return acc.concat([current]) } else { return acc } }, [])
             setYears(filteredArr.map((_year) => ( <option value={_year.VYear}>{_year.Year}</option>))) 
-                 CarImage(make + " " + e.target.value); setNotifications(""); funcStopT(f)
+                 CarImage(make + " " + e.target.value); setNotifications(""); 
       }
 
-      const handleYearChange = (e) => {var f = funcStartT();  setYear(e.target.value); setTransmissions(""); setTransmission("")
+      const handleYearChange = (e) => {  setYear(e.target.value); setTransmissions(""); setTransmission("")
         vehicle.MakeChoice = make; vehicle.YearChoice = e.target.value; vehicle.ModelChoice = model; 
         var t = ruleStartT(); var transmissionList = window.getTransmissions(vehicle); ruleStopT(t)
         setTransmissions(transmissionList.map((_trans) => ( <option value={_trans.trany}>{_trans.Transmission}</option>)))
-        setNotifications(""); funcStopT(f)    
+        setNotifications("");     
      }
      const handleTransChange = (e) => { setTransmission(e.target.value)
         vehicle.TransmissionChoice = e.target.value; vehicle.VID = window.getVID(vehicle);
         setVID(vehicle.VID); GetAllVehicleData(vehicle.VID);
     }
 
-    const GetAllVehicleData = (_VID ) => {var f = funcStartT(); 
+    const GetAllVehicleData = (_VID ) => { 
         if( make !==null && year !==null  && transmission !==null && model !==null ) { 
             var t = ruleStartT(); const tempNotifications = window.GetAllVehicleData(vehicle); ruleStopT(t)
                setNotifications(tempNotifications.map((_notification) => <div>{_notification.message}</div>))
-               funcStopT(f)
+               
         }
     }
 
@@ -178,7 +177,7 @@ const WebSite= () => {
             </FormControl> 
             <br/><br/>
           
-            <div>{ruleTime} </div> <div>{funcTime} </div> <br/>
+            <div>{ruleTime} </div> <br/>
             <div className={classes.notifications}> {notifications} </div>
             <br/><br/>
 
