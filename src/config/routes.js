@@ -25,6 +25,8 @@ const WebSite = lazy(() => import('../pages/Dealership/WebSite'))
 const Dealership = lazy(() => import('../pages/Dealership/Dealership'))
 const Finance = lazy(() => import('../pages/Dealership/Finance'))
 
+const GetGasPrices = lazy(() => import('../pages/API/GetGasPrices'))
+
 const GetVehiclePhoto = lazy(() => import('../pages/Dealership/GetVehiclePhoto'))
 const SQLQuery = lazy(() => import('../pages/Dealership/SQLQuery'))
 
@@ -51,6 +53,7 @@ const routes = [
   <AuthorizedRoute path="/Dealership" exact component={Dealership} />,
   
   <AuthorizedRoute path="/GetVehiclePhoto" exact component={GetVehiclePhoto} />,
+  <AuthorizedRoute path="/GetGasPrices" exact component={GetGasPrices} />,
   <AuthorizedRoute path="/SQLQuery" exact component={SQLQuery} />,
 
 

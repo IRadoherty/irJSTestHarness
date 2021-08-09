@@ -205,6 +205,15 @@ const getMenuItems = (props) => {
             defaultMessage: 'GetVehiclePhoto',
           }),
           leftIcon: <ChatBubble />,
+        },
+        {
+          value: '/GetGasPrices',
+          visible: isAuthorised,
+          primaryText: intl.formatMessage({
+            id: 'GetGasPrices',
+            defaultMessage: 'GetGasPrices',
+          }),
+          leftIcon: <ChatBubble />,
         }
       ]
     },
