@@ -180,16 +180,16 @@ const getMenuItems = (props) => {
             defaultMessage: 'Dealership',
           }),
           leftIcon: <ChatBubble />,
-        },
-        {
-          value: '/Finance',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'Finance',
-            defaultMessage: 'Finance',
-          }),
-          leftIcon: <ChatBubble />,
         }
+       //{
+       //   value: '/Finance',
+       //   visible: isAuthorised,
+       //   primaryText: intl.formatMessage({
+       //     id: 'Finance',
+       //     defaultMessage: 'Finance',
+       //   }),
+       //   leftIcon: <ChatBubble />,
+      //  }
       ]
     },
     {

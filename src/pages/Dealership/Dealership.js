@@ -77,7 +77,7 @@ const Dealership= () => {
 
     var [make, setMake] = useState()
     var [model, setModel] = useState()
-    var [year] = useState()
+    var [year, setYear] = useState()
     var [transmission, setTransmission] = useState()
     var [listPrice] = useState();
     var [principal, setPrincipal] = useState(); var [APR, setAPR] = useState(); var [termInMonths, setTermInMonths] = useState();
@@ -122,7 +122,7 @@ const Dealership= () => {
         vehicle = window.GetVehicleData(vehicle).Vehicle; 
         console.log(vehicle)
         setPrincipal(vehicle.LoanInfo.Principal); setAPR(vehicle.LoanInfo.APR); setTermInMonths(vehicle.LoanInfo.TermInMonths);
-        setMake(vehicle.Make); setModel(vehicle.Model); setTransmission(vehicle.Transmission); setInventory(vehicle.Inventory); 
+        setMake(vehicle.Make); setModel(vehicle.Model); setYear(vehicle.VYear); setTransmission(vehicle.Transmission); setInventory(vehicle.Inventory); 
         setTotalCost(vehicle.PaymentSummary.TotalCost); setMonthlyPayment(vehicle.PaymentSummary.MonthlyPayment);  setTitle(vehicle.LoanInfo.Title); setTax(vehicle.LoanInfo.Tax)
         CarImage(vehicle.Make + " " + vehicle.Model);
         setMainText(`An inquiry for a ${vehicle.VYear} ${vehicle.Make} ${vehicle.Model}, VID: ${_VID}, was just recieved. There are ${vehicle.Inventory} available.`)     
@@ -237,9 +237,9 @@ const Dealership= () => {
         <Button className={classes.margin} onClick={buyVehicle} variant="contained" color="primary" > {intl.formatMessage({ id: 'clearForm', defaultMessage: 'Buy This Car' })} </Button> <br/> <br/> 
           
           
-            </Container>
+      </Container>
             
-        </Page>
-        )
+    </Page>
+  )
 }
 export default Dealership
