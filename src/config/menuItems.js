@@ -104,24 +104,24 @@ const getMenuItems = (props) => {
       primaryTogglesNestedList: true,
       leftIcon: <Web />,
       nestedItems: [
-        {
-          value: '/DealershipirJS',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'DealershipirJS',
-            defaultMessage: 'DealershipirJS',
-          }),
-          leftIcon: <ChatBubble />,
-        },
-        {
-          value: '/DealershipRES',
-          visible: isAuthorised,
-          primaryText: intl.formatMessage({
-            id: 'DealershipRES',
-            defaultMessage: 'DealershipRES',
-          }),
-          leftIcon: <ChatBubble />,
-        },
+    //    {
+     //     value: '/DealershipirJS',
+     //     visible: isAuthorised,
+     //     primaryText: intl.formatMessage({
+     //       id: 'DealershipirJS',
+     //       defaultMessage: 'DealershipirJS',
+     //     }),
+     //     leftIcon: <ChatBubble />,
+     //   },
+     //   {
+      //    value: '/DealershipRES',
+      //    visible: isAuthorised,
+      //    primaryText: intl.formatMessage({
+      //      id: 'DealershipRES',
+       //     defaultMessage: 'DealershipRES',
+       //   }),
+        //  leftIcon: <ChatBubble />,
+        //},
         {
           value: '/MCAPPolicy',
           visible: isAuthorised,
