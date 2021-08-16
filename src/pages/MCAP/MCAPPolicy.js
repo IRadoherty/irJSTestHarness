@@ -53,9 +53,6 @@ const useStyles = makeStyles((theme) => ({
             width: '550px'
         },
         presets:{
-            width: '110px'
-        },
-        presets:{
             width: '210px'
         },
         dateField:{
