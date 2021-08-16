@@ -44,7 +44,6 @@ const GetVehiclePhoto = () => {
         setCarImageURL('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake)
         axios.get('http://carimagery.com/api.asmx/GetImageUrl?searchTerm=' + vehicleMake).then((formRes) => {    
             var xml = new XMLParser().parseFromString(formRes.data);
-            
             setCarImage(xml.value)
         })
     }

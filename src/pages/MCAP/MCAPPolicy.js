@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import { blue } from '@material-ui/core/colors'
 
-    const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
         Page:{ 
             //'background-color': '#ffffff !important',
         },
@@ -55,6 +55,9 @@ import { blue } from '@material-ui/core/colors'
         presets:{
             width: '110px'
         },
+        presets:{
+            width: '210px'
+        },
         dateField:{
             width: '225px',
             'margin-left': '10px'
@@ -65,7 +68,9 @@ import { blue } from '@material-ui/core/colors'
     } ))
 
 const MCAPPolicy = () => {
-    useEffect(() => {  })
+    useEffect(() => { 
+       
+     })
     const classes = useStyles()
     const intl = useIntl()
 
@@ -87,6 +92,23 @@ const MCAPPolicy = () => {
     var [todaysDate] = useState()
     var policy = {}; 
 
+    const getData = async ()=>{
+        fetch('../InvestorServicingFeeSample.json'
+        ,{ headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        }
+        )
+          .then(function(response){ console.log(response)
+           
+            return response.json();
+          })
+          .then(function(myJson) { console.log(myJson);
+            setData(myJson)
+          });
+      }
+    const [data,setData]=useState([]);
     var [ruleTime, setRuleTime] = useState(); 
     var [funcTime] = useState()
 
@@ -96,13 +118,11 @@ const MCAPPolicy = () => {
         policy.InvestorNumber = InvestorNumber; policy.InvestorSub = InvestorSub; policy.LineOfBusiness = LineOfBusiness; policy.Brand = Brand
         policy.ChargeType = ChargeType; policy.ProductCode = ProductCode; policy.TrancheID = TrancheID; policy.SourceOfFunds = SourceOfFunds	
         policy.BorrowerContractDate = BorrowerContractDate; policy.CommitmentIssueDate = CommitmentIssueDate; policy.ProductID = ProductID; policy.InsuranceType = InsuranceType
-        policy.BasisPoints = ""
-        policy.FixedAmount = ""
+        policy.BasisPoints = ""; policy.FixedAmount = ""
         var t = ruleStartT();
         let returnPolicyData = window.runMCAPPolicy(policy);
         ruleStopT(t)
-        setBasisPoints(returnPolicyData.BasisPoints); 
-        setFixedAmount(returnPolicyData.FixedAmount)
+        setBasisPoints(returnPolicyData.BasisPoints); setFixedAmount(returnPolicyData.FixedAmount)
         ruleStopT(t)
 
     }
@@ -110,8 +130,7 @@ const MCAPPolicy = () => {
         policy.InvestorNumber = InvestorNumber; policy.InvestorSub = InvestorSub; policy.LineOfBusiness = LineOfBusiness; policy.Brand = Brand
         policy.ChargeType = ChargeType; policy.ProductCode = ProductCode; policy.TrancheID = TrancheID; policy.SourceOfFunds = SourceOfFunds	
         policy.BorrowerContractDate = BorrowerContractDate; policy.CommitmentIssueDate = CommitmentIssueDate; policy.ProductID = ProductID; policy.InsuranceType = InsuranceType
-        policy.BasisPoints = ""
-        policy.FixedAmount = ""
+        policy.BasisPoints = ""; policy.FixedAmount = ""
         var returnPolicyData = {}
         var t = ruleStartT();
         for (var i = 0; i < runCount; i++) { returnPolicyData = window.runMCAPPolicy(policy); }
@@ -120,6 +139,38 @@ const MCAPPolicy = () => {
         ruleStopT(t)
     }
 
+    const loadFile = () => {
+        policy.InvestorNumber = InvestorNumber; policy.InvestorSub = InvestorSub; policy.LineOfBusiness = LineOfBusiness; policy.Brand = Brand
+        policy.ChargeType = ChargeType; policy.ProductCode = ProductCode; policy.TrancheID = TrancheID; policy.SourceOfFunds = SourceOfFunds	
+        policy.BorrowerContractDate = BorrowerContractDate; policy.CommitmentIssueDate = CommitmentIssueDate; policy.ProductID = ProductID; policy.InsuranceType = InsuranceType
+        policy.BasisPoints = ""; policy.FixedAmount = ""
+        getData()
+    }
+    const runFile = () => {
+        policy.BasisPoints = ""; policy.FixedAmount = ""
+        var returnPolicyData = {}
+        var t = ruleStartT();
+        for (var i = 0; i < data.length; i++) {
+            policy.InvestorNumber = data[i].InvestorNumber; 
+            policy.InvestorSub = data[i].InvestorSub; 
+            policy.LineOfBusiness = data[i].LineOfBusiness; 
+            policy.Brand = data[i].Brand
+            policy.ChargeType = data[i].ChargeType; 
+            policy.ProductCode = data[i].ProductCode; 
+            policy.TrancheID = data[i].TrancheID; 
+            policy.SourceOfFunds = data[i].SourceOfFunds	
+            policy.BorrowerContractDate = data[i].BorrowerContractDate; 
+            policy.CommitmentIssueDate = data[i].CommitmentIssueDate; 
+            policy.ProductID = data[i].ProductID; 
+            policy.InsuranceType = data[i].InsuranceType
+            
+            returnPolicyData = window.runMCAPPolicy(policy); 
+            setBasisPoints(returnPolicyData.BasisPoints); 
+            setFixedAmount(returnPolicyData.FixedAmount)
+        }
+        ruleStopT(t)
+
+    }
     const clearForm = () => { setRunCount("")
         setInvestorNumber(""); setInvestorSub(""); setLineOfBusiness(""); setBrand(""); setChargeType(""); setProductCode(""); setTrancheID(""); setSourceOfFunds(""); 
         setBorrowerContractDate(""); setCommitmentIssueDate(""); setProductID(""); setInsuranceType(""); setBasisPoints(""); setFixedAmount("")
@@ -192,9 +243,11 @@ const MCAPPolicy = () => {
             <Button onClick={runXTimes} className={classes.buttonRunX} variant="contained" color="primary" > {intl.formatMessage({ id: 'runXTimes', defaultMessage: `Run policy ${runCount} times` })} </Button> <br/> <br/>
             
             <div> <br/><br/>
-            <Button onClick={preset1} className={classes.presets} variant="contained" color="primary" > {intl.formatMessage({ id: 'preset1', defaultMessage: "Preset 1" })} </Button> <br/> <br/>
-         
-                </div>
+              <Button onClick={loadFile} className={classes.presets1} variant="contained" color="primary" > {intl.formatMessage({ id: 'runFile', defaultMessage: "Load JSON file" })} </Button> <br/> <br/>
+            <Button onClick={runFile} className={classes.presets1} variant="contained" color="primary" > {intl.formatMessage({ id: 'runFile1', defaultMessage: "Run JSON file" })} </Button> <br/> <br/>
+            <Button onClick={preset1} className={classes.presets1} variant="contained" color="primary" > {intl.formatMessage({ id: 'preset1', defaultMessage: "Preset 1" })} </Button> <br/> <br/>
+        
+            </div>
             </div>
            </Container>
 

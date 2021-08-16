@@ -40,10 +40,7 @@ const GetGasPrices = () => {
     const CarImage = () => {
         const headers = { headers: { 'authorization': 'apikey 3bLRTdEolZLhlScVEw9YTv:1rhH09yY7x4gWPYYIJV13k', 'Accept': 'application/json', 'Content-Type': 'application/json' } }
 
-        axios.get('https://api.collectapi.com/gasPrice/stateUsaPrice?state=' + state, headers).then((formRes) => {
-            
-            setGasPrices(JSON.stringify(formRes.data))
-        })
+        axios.get('https://api.collectapi.com/gasPrice/stateUsaPrice?state=' + state, headers).then((formRes) => { setGasPrices(JSON.stringify(formRes.data)) })
     }
 
 
