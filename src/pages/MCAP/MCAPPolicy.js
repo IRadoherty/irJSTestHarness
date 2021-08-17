@@ -240,9 +240,9 @@ const MCAPPolicy = () => {
             <Button onClick={runXTimes} className={classes.buttonRunX} variant="contained" color="primary" > {intl.formatMessage({ id: 'runXTimes', defaultMessage: `Run policy ${runCount} times` })} </Button> <br/> <br/>
             
             <div> <br/><br/>
-              <Button onClick={loadFile} className={classes.presets1} variant="contained" color="primary" > {intl.formatMessage({ id: 'runFile', defaultMessage: "Load JSON file" })} </Button> <br/> <br/>
-            <Button onClick={runFile} className={classes.presets1} variant="contained" color="primary" > {intl.formatMessage({ id: 'runFile1', defaultMessage: "Run JSON file" })} </Button> <br/> <br/>
-            <Button onClick={preset1} className={classes.presets1} variant="contained" color="primary" > {intl.formatMessage({ id: 'preset1', defaultMessage: "Preset 1" })} </Button> <br/> <br/>
+              <Button onClick={loadFile} className={classes.presets} variant="contained" color="primary" > {intl.formatMessage({ id: 'runFile', defaultMessage: "Load JSON file" })} </Button> <br/> <br/>
+            <Button onClick={runFile} className={classes.presets} variant="contained" color="primary" > {intl.formatMessage({ id: 'runFile1', defaultMessage: "Run JSON file" })} </Button> <br/> <br/>
+            <Button onClick={preset1} className={classes.presets} variant="contained" color="primary" > {intl.formatMessage({ id: 'preset1', defaultMessage: "Preset 1" })} </Button> <br/> <br/>
         
             </div>
             </div>
